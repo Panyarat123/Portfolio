@@ -1,0 +1,1445 @@
+<!DOCTYPE html>
+<html lang="th">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Panyarat Netrune | IT Audit & System Analysis Portfolio</title>
+    
+    <!-- SEO Meta Tags -->
+    <meta name="description" content="Panyarat Netrune - 3rd-year CS Student seeking IT Audit, System Analysis, Business Analysis internship. Experienced in managing 300+ students, system design, and risk analysis.">
+    <meta name="keywords" content="IT Audit, System Analysis, Business Analysis, Internship, Computer Science, COSO Framework, Risk Management">
+    <meta name="author" content="Panyarat Netrune">
+    
+    <!-- Open Graph Meta Tags -->
+    <meta property="og:title" content="Panyarat Netrune | IT Audit & SA Portfolio">
+    <meta property="og:description" content="Portfolio of a CS Student seeking Internship in IT Audit, SA, BA.">
+    <meta property="og:image" content="Me3.jpg">
+    <meta property="og:type" content="website">
+    
+    <link rel="icon" type="image/png" href="Me3.jpg">
+    
+    <link href="https://fonts.googleapis.com/css2?family=Sarabun:wght@300;400;600;700&display=swap" rel="stylesheet">
+    
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        html {
+            scroll-behavior: smooth;
+        }
+        
+        body {
+            font-family: 'Segoe UI', 'Sarabun', Tahoma, Geneva, Verdana, sans-serif;
+            line-height: 1.6;
+            color: #333;
+            background: #f5f5f5;
+        }
+
+        /* Scroll Progress Bar */
+        .progress-bar {
+            position: fixed;
+            top: 0;
+            left: 0;
+            height: 4px;
+            width: 0%;
+            background: linear-gradient(90deg, #667eea 0%, #764ba2 100%);
+            z-index: 1001;
+            transition: width 0.1s;
+        }
+        
+        /* Navigation */
+        nav {
+            background: #1a1a2e;
+            color: white;
+            padding: 1rem 0;
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+        }
+        
+        nav .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 2rem;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        
+        nav h1 {
+            font-size: 1.5rem;
+            font-weight: 700;
+        }
+        
+        nav ul {
+            display: flex;
+            list-style: none;
+            gap: 2rem;
+        }
+        
+        nav a {
+            color: rgba(255,255,255,0.8);
+            text-decoration: none;
+            transition: color 0.3s;
+            position: relative;
+            font-size: 0.95rem;
+        }
+
+        nav a.active {
+            color: #fff;
+            font-weight: bold;
+        }
+        
+        nav a::after {
+            content: '';
+            position: absolute;
+            bottom: -5px;
+            left: 0;
+            width: 0;
+            height: 2px;
+            background: #00d4ff;
+            transition: width 0.3s;
+        }
+        
+        nav a:hover::after,
+        nav a.active::after {
+            width: 100%;
+        }
+
+        /* Hamburger Menu */
+        .menu-toggle {
+            display: none;
+            background: none;
+            border: none;
+            color: white;
+            font-size: 1.8rem;
+            cursor: pointer;
+            padding: 0.5rem;
+            z-index: 1001;
+        }
+
+        .menu-toggle:focus {
+            outline: 2px solid #00d4ff;
+            outline-offset: 4px;
+        }
+        
+        /* Hero Section */
+        .hero {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            padding: 6rem 2rem 4rem;
+            text-align: center;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+
+        .profile-img {
+            width: 180px;
+            height: 180px;
+            border-radius: 50%;
+            object-fit: cover;
+            object-position: top center; 
+            border: 5px solid rgba(255, 255, 255, 0.8);
+            margin-bottom: 1.5rem;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.3);
+            transition: transform 0.3s;
+            animation: float 3s ease-in-out infinite;
+            background-color: #ddd;
+        }
+
+        @keyframes float {
+            0%, 100% { transform: translateY(0px); }
+            50% { transform: translateY(-10px); }
+        }
+
+        .profile-img:hover {
+            transform: scale(1.05) translateY(-10px);
+        }
+        
+        .hero h1 {
+            font-size: 3rem;
+            margin-bottom: 0.5rem;
+            animation: fadeInDown 0.8s;
+        }
+        
+        .hero p {
+            font-size: 1.3rem;
+            margin-bottom: 1rem;
+            opacity: 0.95;
+            max-width: 800px;
+            animation: fadeInUp 0.8s;
+        }
+
+        @keyframes fadeInDown {
+            from { opacity: 0; transform: translateY(-20px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+
+        @keyframes fadeInUp {
+            from { opacity: 0; transform: translateY(20px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+        
+        .hero-links {
+            display: flex;
+            gap: 1rem;
+            justify-content: center;
+            flex-wrap: wrap;
+            margin-top: 1.5rem;
+            animation: fadeInUp 1s;
+        }
+        
+        .btn {
+            padding: 0.8rem 2rem;
+            background: white;
+            color: #667eea;
+            text-decoration: none;
+            border-radius: 30px;
+            font-weight: bold;
+            transition: all 0.3s;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.2);
+            border: 2px solid white;
+        }
+        
+        .btn:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 6px 20px rgba(0,0,0,0.3);
+        }
+        
+        .btn-outline {
+            background: transparent;
+            color: white;
+        }
+
+        .btn-outline:hover {
+            background: white;
+            color: #667eea;
+        }
+
+        /* Availability Badge */
+        .availability-badge {
+            background: rgba(255,255,255,0.2);
+            backdrop-filter: blur(10px);
+            padding: 1.5rem;
+            border-radius: 15px;
+            margin-top: 2rem;
+            border: 2px solid rgba(255,255,255,0.3);
+            max-width: 600px;
+        }
+
+        .availability-badge h3 {
+            font-size: 1.4rem;
+            margin-bottom: 0.5rem;
+        }
+
+        /* Container */
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 2rem;
+        }
+        
+        section {
+            padding: 4rem 2rem;
+            background: white;
+            margin: 2rem auto;
+            max-width: 1200px;
+            border-radius: 15px;
+            box-shadow: 0 5px 20px rgba(0,0,0,0.08);
+        }
+
+        h2 {
+            font-size: 2.5rem;
+            margin-bottom: 2rem;
+            color: #1a1a2e;
+            border-bottom: 4px solid #667eea;
+            padding-bottom: 0.5rem;
+            display: inline-block;
+        }
+        
+        h3 {
+            font-size: 1.8rem;
+            margin: 2rem 0 1rem;
+            color: #667eea;
+        }
+        
+        /* Stats */
+        .stats {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 2rem;
+            margin: 2rem 0;
+        }
+        
+        .stat-card {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            padding: 2rem;
+            border-radius: 15px;
+            text-align: center;
+            transition: all 0.3s;
+            box-shadow: 0 5px 15px rgba(102, 126, 234, 0.3);
+        }
+        
+        .stat-card:hover {
+            transform: translateY(-10px) scale(1.02);
+            box-shadow: 0 10px 30px rgba(102, 126, 234, 0.5);
+        }
+        
+        .stat-card h3 {
+            font-size: 3rem;
+            color: white;
+            margin: 0;
+            text-shadow: 2px 2px 4px rgba(0,0,0,0.2);
+        }
+        
+        .stat-card p {
+            margin-top: 0.5rem;
+            opacity: 0.9;
+            font-size: 1.1rem;
+            font-weight: 500;
+        }
+        
+        /* Skills */
+        .skills-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 2rem;
+            margin: 2rem 0;
+        }
+        
+        .skill-category {
+            background: linear-gradient(135deg, #f8f9fa 0%, #e9ecef 100%);
+            padding: 1.5rem;
+            border-radius: 10px;
+            border-left: 5px solid #667eea;
+            transition: all 0.3s;
+        }
+
+        .skill-category:hover {
+            transform: translateX(5px);
+            box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+            border-left-width: 10px;
+        }
+        
+        .skill-category h4 {
+            color: #667eea;
+            margin-bottom: 1rem;
+            font-size: 1.3rem;
+        }
+        
+        .skill-category ul {
+            list-style: none;
+        }
+        
+        .skill-category li {
+            padding: 0.5rem 0;
+            border-bottom: 1px solid #dee2e6;
+            transition: padding-left 0.3s;
+            display: flex;
+            align-items: center;
+        }
+        
+        .skill-category li::before {
+            content: '•';
+            color: #667eea;
+            font-weight: bold;
+            display: inline-block; 
+            width: 1em;
+            margin-left: -1em;
+        }
+
+        .skill-category li:hover {
+            padding-left: 10px;
+            color: #667eea;
+            font-weight: 600;
+        }
+        
+        .skill-category li:last-child {
+            border-bottom: none;
+        }
+
+        .skill-category p {
+            color: #555;
+            line-height: 1.8;
+        }
+        
+        /* Projects */
+        .project-card {
+            background: linear-gradient(135deg, #f8f9fa 0%, #ffffff 100%);
+            padding: 2.5rem;
+            border-radius: 15px;
+            margin: 2rem 0;
+            border-left: 6px solid #667eea;
+            box-shadow: 0 5px 20px rgba(0,0,0,0.08);
+            transition: all 0.3s;
+        }
+
+        .project-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 30px rgba(0,0,0,0.15);
+        }
+        
+        .project-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: start;
+            margin-bottom: 1.5rem;
+            flex-wrap: wrap;
+            gap: 1rem;
+        }
+        
+        .project-tags {
+            display: flex;
+            gap: 0.5rem;
+            flex-wrap: wrap;
+        }
+        
+        .tag {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            padding: 0.4rem 1rem;
+            border-radius: 25px;
+            font-size: 0.85rem;
+            box-shadow: 0 2px 5px rgba(102, 126, 234, 0.3);
+            transition: all 0.3s;
+        }
+
+        .tag:hover {
+            transform: scale(1.1);
+        }
+
+        /* Diagram Grid */
+        .diagram-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 1.5rem;
+            margin: 2rem 0;
+        }
+
+        .diagram-frame {
+            background: #ffffff;
+            border: 2px solid #e9ecef;
+            border-radius: 12px;
+            padding: 10px;
+            box-shadow: 0 4px 10px rgba(0,0,0,0.05);
+            text-align: center;
+            transition: all 0.3s;
+            cursor: pointer;
+        }
+
+        .diagram-frame:hover {
+            transform: translateY(-5px);
+            border-color: #667eea;
+            box-shadow: 0 8px 25px rgba(102, 126, 234, 0.2);
+        }
+
+        .diagram-frame img {
+            width: 100%;
+            height: 200px;
+            object-fit: contain;
+            border-radius: 8px;
+            background-color: #f0f0f0;
+        }
+
+        .diagram-caption {
+            font-size: 0.9rem;
+            color: #495057;
+            margin-top: 0.8rem;
+            font-weight: 600;
+        }
+        
+        .project-links {
+            display: flex;
+            gap: 1rem;
+            margin-top: 2rem;
+            flex-wrap: wrap;
+        }
+        
+        .project-link {
+            color: #667eea;
+            text-decoration: none;
+            font-weight: bold;
+            transition: all 0.3s;
+            padding: 0.6rem 1.2rem;
+            border-radius: 25px;
+            background: rgba(102, 126, 234, 0.1);
+            display: inline-flex;
+            align-items: center;
+            gap: 0.5rem;
+        }
+        
+        .project-link:hover {
+            color: white;
+            background: #667eea;
+            transform: translateY(-2px);
+        }
+        
+        /* Timeline */
+        .timeline {
+            position: relative;
+            padding-left: 2rem;
+            margin-top: 2rem;
+        }
+        
+        .timeline::before {
+            content: '';
+            position: absolute;
+            left: 0;
+            top: 0;
+            height: 100%;
+            width: 4px;
+            background: linear-gradient(180deg, #667eea 0%, #764ba2 100%);
+            border-radius: 2px;
+        }
+        
+        .timeline-item {
+            position: relative;
+            margin-bottom: 3rem;
+            padding-left: 2rem;
+        }
+        
+        .timeline-item::before {
+            content: '';
+            position: absolute;
+            left: -2.6rem;
+            top: 0;
+            width: 16px;
+            height: 16px;
+            border-radius: 50%;
+            background: #667eea;
+            border: 4px solid white;
+            box-shadow: 0 0 0 3px rgba(102, 126, 234, 0.3);
+            transition: all 0.3s;
+        }
+
+        .timeline-item:hover::before {
+            transform: scale(1.3);
+            background: #764ba2;
+            box-shadow: 0 0 0 5px rgba(102, 126, 234, 0.4);
+        }
+        
+        .timeline-date {
+            color: #764ba2;
+            font-weight: bold;
+            margin-bottom: 0.5rem;
+            font-size: 0.95rem;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+        }
+
+        /* Certificates Grid */
+        .cert-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+            gap: 1.5rem;
+            margin-top: 1.5rem;
+        }
+
+        .cert-card {
+            background: white;
+            padding: 1.5rem;
+            border-radius: 10px;
+            border-left: 5px solid;
+            box-shadow: 0 4px 10px rgba(0,0,0,0.05);
+            transition: all 0.3s;
+            border: 1px solid #eee;
+        }
+
+        .cert-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 8px 20px rgba(0,0,0,0.1);
+        }
+
+        .cert-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: flex-start;
+            margin-bottom: 0.5rem;
+        }
+
+        .cert-tag {
+            padding: 0.2rem 0.8rem;
+            border-radius: 15px;
+            font-size: 0.75rem;
+            font-weight: bold;
+            white-space: nowrap;
+        }
+
+        /* Gallery Section */
+        .gallery-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 1.5rem;
+        }
+
+        .gallery-item {
+            position: relative;
+            overflow: hidden;
+            border-radius: 10px;
+            box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+            height: 300px; 
+            background-color: #f8f9fa;
+            border: 1px solid #e9ecef;
+            cursor: pointer;
+        }
+
+        .gallery-item img {
+            width: 100%;
+            height: 100%;
+            object-fit: contain; 
+            transition: transform 0.5s;
+        }
+
+        .gallery-item:hover img {
+            transform: scale(1.05);
+        }
+
+        .gallery-overlay {
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            background: rgba(0,0,0,0.7);
+            color: white;
+            padding: 0.8rem;
+            opacity: 0;
+            transition: opacity 0.3s;
+            text-align: center;
+        }
+
+        .gallery-item:hover .gallery-overlay {
+            opacity: 1;
+        }
+
+        /* Lightbox */
+        .lightbox {
+            display: none;
+            position: fixed;
+            z-index: 2000;
+            padding-top: 50px;
+            left: 0;
+            top: 0;
+            width: 100%;
+            height: 100%;
+            overflow: auto;
+            background-color: rgba(0, 0, 0, 0.9);
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+        }
+
+        .lightbox.active {
+            display: flex;
+        }
+
+        .lightbox-content {
+            margin: auto;
+            display: block;
+            max-width: 90%;
+            max-height: 80vh;
+            border-radius: 5px;
+            box-shadow: 0 0 20px rgba(255,255,255,0.2);
+            animation: zoomIn 0.3s;
+        }
+
+        @keyframes zoomIn {
+            from {transform:scale(0)} 
+            to {transform:scale(1)}
+        }
+
+        .close-lightbox {
+            position: absolute;
+            top: 20px;
+            right: 35px;
+            color: #f1f1f1;
+            font-size: 40px;
+            font-weight: bold;
+            transition: 0.3s;
+            cursor: pointer;
+        }
+
+        .close-lightbox:hover,
+        .close-lightbox:focus {
+            color: #bbb;
+            text-decoration: none;
+            cursor: pointer;
+        }
+        
+        /* Contact */
+        .contact-container {
+            display: flex;
+            justify-content: center;
+            gap: 2rem;
+            flex-wrap: wrap;
+        }
+
+        .contact-card {
+            background: white;
+            padding: 2rem;
+            border-radius: 15px;
+            text-align: center;
+            transition: all 0.3s;
+            flex: 1;
+            min-width: 280px;
+            max-width: 350px;
+            border: 1px solid #eee;
+            text-decoration: none;
+            color: inherit;
+        }
+
+        .contact-card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 15px 30px rgba(102, 126, 234, 0.2);
+            border-color: #667eea;
+        }
+        
+        .contact-icon {
+            font-size: 2.5rem;
+            margin-bottom: 1rem;
+            display: inline-block;
+        }
+
+        .contact-card h4 {
+            margin-bottom: 0.5rem;
+            color: #1a1a2e;
+        }
+
+        .contact-card p.link-text {
+            color: #667eea;
+            font-weight: 600;
+        }
+
+        /* Back to Top Button */
+        .back-to-top {
+            position: fixed;
+            bottom: 30px;
+            right: 30px;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            width: 50px;
+            height: 50px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            cursor: pointer;
+            opacity: 0;
+            pointer-events: none;
+            transition: all 0.3s;
+            box-shadow: 0 4px 15px rgba(102, 126, 234, 0.5);
+            z-index: 999;
+            font-size: 1.5rem;
+            text-decoration: none;
+        }
+
+        .back-to-top.show {
+            opacity: 1;
+            pointer-events: all;
+        }
+
+        .back-to-top:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 6px 20px rgba(102, 126, 234, 0.7);
+        }
+        
+        /* Footer */
+        footer {
+            background: #1a1a2e;
+            color: rgba(255,255,255,0.7);
+            text-align: center;
+            padding: 3rem 2rem;
+            margin-top: 4rem;
+        }
+
+        footer p {
+            margin-bottom: 1rem;
+        }
+
+        footer a {
+            color: #00d4ff;
+            text-decoration: none;
+        }
+
+        footer a:hover {
+            text-decoration: underline;
+        }
+
+        /* Loading Skeleton */
+        .skeleton {
+            background: linear-gradient(90deg, #f0f0f0 25%, #e0e0e0 50%, #f0f0f0 75%);
+            background-size: 200% 100%;
+            animation: loading 1.5s infinite;
+        }
+
+        @keyframes loading {
+            0% { background-position: 200% 0; }
+            100% { background-position: -200% 0; }
+        }
+        
+        /* Responsive */
+        @media (max-width: 768px) {
+            .hero h1 { font-size: 2rem; }
+            .hero p { font-size: 1rem; }
+            
+            nav ul {
+                position: fixed;
+                top: 0;
+                left: -100%;
+                width: 70%;
+                height: 100vh;
+                background: #1a1a2e;
+                flex-direction: column;
+                justify-content: center;
+                align-items: center;
+                gap: 2rem;
+                transition: left 0.3s ease;
+                z-index: 999;
+                box-shadow: 2px 0 10px rgba(0,0,0,0.3);
+            }
+
+            nav ul.active {
+                left: 0;
+            }
+
+            .menu-toggle {
+                display: block;
+            }
+
+            .hero-links { 
+                flex-direction: column; 
+                width: 100%; 
+            }
+            
+            .btn { 
+                width: 100%; 
+                text-align: center; 
+            }
+            
+            h2 { font-size: 2rem; }
+            .stats { grid-template-columns: 1fr; }
+            
+            .availability-badge h3 {
+                font-size: 1.1rem;
+            }
+        }
+
+        /* Accessibility - Focus Styles */
+        *:focus {
+            outline: 2px solid #667eea;
+            outline-offset: 2px;
+        }
+
+        /* Skip to Content Link */
+        .skip-link {
+            position: absolute;
+            top: -40px;
+            left: 0;
+            background: #667eea;
+            color: white;
+            padding: 8px;
+            text-decoration: none;
+            z-index: 100;
+        }
+
+        .skip-link:focus {
+            top: 0;
+        }
+    </style>
+</head>
+<body>
+    <!-- Skip to Content for Accessibility -->
+    <a href="#main-content" class="skip-link">Skip to main content</a>
+
+    <div class="progress-bar" id="progressBar"></div>
+
+    <div id="lightbox" class="lightbox" role="dialog" aria-label="Image lightbox" aria-modal="true">
+        <span class="close-lightbox" role="button" tabindex="0" aria-label="Close lightbox">&times;</span>
+        <img class="lightbox-content" id="lightbox-img" alt="">
+    </div>
+
+    <nav id="navbar" role="navigation" aria-label="Main navigation">
+        <div class="container">
+            <h1>Panyarat Netrune</h1>
+            <button class="menu-toggle" id="menuToggle" aria-label="Toggle menu" aria-expanded="false">
+                ☰
+            </button>
+            <ul id="navMenu">
+                <li><a href="#about">About</a></li>
+                <li><a href="#education">Education</a></li>
+                <li><a href="#projects">Projects</a></li>
+                <li><a href="#experience">Experience</a></li>
+                <li><a href="#skills">Skills</a></li>
+                <li><a href="#achievements">Achievements</a></li>
+                <li><a href="#gallery">Gallery</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <header class="hero" id="main-content">
+        <img src="Me3.jpg" alt="Profile photo of Panyarat Netrune" class="profile-img" loading="eager">
+        
+        <h1>Panyarat Netrune</h1>
+        <p>🎯 Business Analyst | System Analyst | IT Audit Enthusiast</p>
+        <p>3rd-year Computer Science Student @ Kasetsart University Sriracha</p>
+        
+        <div class="hero-links">
+            <a href="https://drive.google.com/drive/folders/1hdIVUE8Q03VH0y9Dm-s6D6UYCFxW8dWE?usp=sharing" target="_blank" rel="noopener noreferrer" class="btn">📄 View Resume</a>
+            <a href="#projects" class="btn btn-outline">🚀 View Projects</a>
+            <a href="#contact" class="btn btn-outline">📞 Contact Me</a>
+        </div>
+    </header>
+
+    <section id="about">
+        <h2>👋 About Me</h2>
+        <div style="display: flex; gap: 2rem; align-items: center; flex-wrap: wrap;">
+            <div style="flex: 2;">
+                <p style="font-size: 1.2rem; line-height: 1.9; margin-bottom: 2rem;">
+                    I'm a <strong>3rd-year Computer Science student</strong> with proven leadership experience managing 
+                    <strong>300+ stakeholders</strong> over 3 years. My passion lies in <strong>Business Analysis, System Analysis, 
+                    and IT Audit</strong>, where I combine analytical thinking with practical problem-solving skills.
+                </p>
+                
+                <p style="font-size: 1.1rem; line-height: 1.8; color: #666; margin-bottom: 2rem;">
+                    Through my role as <strong>Head of Computer Science Department</strong> and <strong>University MC</strong>, 
+                    I've developed strong skills in stakeholder management, risk assessment, process optimization, and 
+                    cross-functional team coordination. I'm currently seeking internship opportunities where I can apply 
+                    my technical knowledge and leadership experience to real-world business challenges.
+                </p>
+            </div>
+        </div>
+        
+        <div class="stats">
+            <div class="stat-card">
+                <h3>300+</h3>
+                <p>Students Managed</p>
+            </div>
+            <div class="stat-card">
+                <h3>20+</h3>
+                <p>Events Hosted as MC</p>
+            </div>
+            <div class="stat-card">
+                <h3>3,000+</h3>
+                <p>Audience Reached</p>
+            </div>
+            <div class="stat-card">
+                <h3>3 Years</h3>
+                <p>Leadership Role</p>
+            </div>
+        </div>
+    </section>
+
+    <section id="education">
+        <h2>🎓 Education</h2>
+        
+        <div class="timeline">
+            <div class="timeline-item">
+                <div class="timeline-date">2022 - Present (Expected 2026)</div>
+                <h3 style="margin-top: 0;">Bachelor of Science in Computer Science</h3>
+                <p style="color: #666; font-size: 1.1rem;">Kasetsart University Sriracha Campus</p>
+                
+                <p style="margin-top: 1.5rem; font-weight: 600; color: #667eea;">📚 Relevant Coursework:</p>
+                <ul style="margin: 1rem 0 0 2rem; line-height: 2;">
+                    <li><strong>System Analysis and Design</strong> - DFD, ERD, Use Cases, Agile</li>
+                    <li><strong>Database Management Systems</strong> - SQL, Database Design, Normalization</li>
+                    <li><strong>Software Engineering</strong> - SDLC, Testing, Documentation</li>
+                    <li><strong>Data Structures and Algorithms</strong> - Problem Solving, Optimization</li>
+                    <li><strong>Information Security</strong> - Network Security, Risk Management</li>
+                </ul>
+
+                <div style="margin-top: 2rem; padding: 1.5rem; background: #f8f9fa; border-radius: 10px; border-left: 4px solid #667eea;">
+                    <p style="font-weight: 600; color: #667eea; margin-bottom: 0.5rem;">🎯 Academic Focus:</p>
+                    <p style="color: #666; line-height: 1.8;">
+                        Specializing in <strong>System Analysis</strong>, <strong>IT Risk Management</strong>, 
+                        and <strong>Business Process Optimization</strong>. Developed comprehensive understanding 
+                        of COSO Framework, Internal Controls, and Risk Assessment methodologies.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="projects">
+        <h2>🚀 Featured Projects</h2>
+        
+        <div class="project-card">
+            <div class="project-header">
+                <div>
+                    <h3 style="margin: 0; color: #1a1a2e;">Bit Express Smart Delivery System</h3>
+                    <p style="color: #666; margin-top: 0.5rem; font-size: 1.05rem;">
+                        🚚 End-to-End Logistics Platform | 📅 Jan - Apr 2024 | 👥 Team of 6
+                    </p>
+                </div>
+                <div class="project-tags">
+                    <span class="tag">System Analysis</span>
+                    <span class="tag">IT Audit</span>
+                    <span class="tag">Risk Management</span>
+                    <span class="tag">UI/UX Design</span>
+                </div>
+            </div>
+            
+            <p style="margin: 1.5rem 0; font-size: 1.1rem; line-height: 1.8; color: #444;">
+                Designed comprehensive logistics platform connecting <strong>Senders, Riders, and Receivers</strong> 
+                with real-time tracking, automated notifications, and digital proof of delivery (e-POD). 
+                The system addresses critical pain points in traditional parcel delivery through technology-driven solutions.
+            </p>
+            
+            <h4 style="color: #667eea; margin-top: 2rem; font-size: 1.3rem;">🎯 Key Contributions:</h4>
+            <ul style="margin-left: 2rem; line-height: 2; color: #555;">
+                <li><strong>Business Analysis:</strong> Analyzed pain points from 300+ potential users.</li>
+                <li><strong>System Design:</strong> Created DFD (Level 0-1), Class Diagram, and Activity Diagrams.</li>
+                <li><strong>Risk Analysis (IT Audit Focus):</strong> Developed <strong>Risk Control Matrix (RCM)</strong> using COSO Framework covering Authentication, Data Integrity, and Fraud Prevention.</li>
+                <li><strong>UI/UX:</strong> Designed 50+ screens using Figma for Customer and Rider apps.</li>
+                <li><strong>Documentation:</strong> Authored 128-page technical documentation.</li>
+            </ul>
+            
+            <h4 style="color: #667eea; margin-top: 2rem; font-size: 1.3rem;">📊 Impact:</h4>
+            <ul style="margin-left: 2rem; line-height: 2; color: #555;">
+                <li>✅ <strong>100% control coverage</strong> for critical risks identified.</li>
+                <li>✅ Projected to <strong>reduce customer inquiries by 80%</strong> via real-time tracking.</li>
+            </ul>
+
+            <h4 style="color: #667eea; margin-top: 2rem; font-size: 1.3rem;">📐 System Design & Artifacts (Click to Enlarge):</h4>
+            <div class="diagram-grid">
+                <div class="diagram-frame" role="button" tabindex="0">
+                    <img src="dfd_level1.jpg" alt="Data Flow Diagram showing system processes" loading="lazy">
+                    <p class="diagram-caption">🔄 Data Flow Diagram</p>
+                </div>
+
+                <div class="diagram-frame" role="button" tabindex="0">
+                     <img src="class_diagram.png" alt="Class Diagram showing system architecture" loading="lazy">
+                    <p class="diagram-caption">🗄️ Class Diagram</p>
+                </div>
+
+                <div class="diagram-frame" role="button" tabindex="0">
+                     <img src="risk_control.png" alt="Risk Control Matrix" loading="lazy">
+                    <p class="diagram-caption">🛡️ Risk & Internal Controls</p>
+                </div>
+                
+                <div class="diagram-frame" role="button" tabindex="0">
+                     <img src="Figma_Home1.png" alt="UI Design Homepage Mockup" loading="lazy">
+                    <p class="diagram-caption">🎨 UI/UX Design (Figma)</p>
+                </div>
+
+                <div class="diagram-frame" role="button" tabindex="0">
+                     <img src="Figma_Home.png" alt="UI Design Alternative Homepage" loading="lazy">
+                    <p class="diagram-caption">🎨 UI/UX Design (Figma)</p>
+                </div>
+
+                <div class="diagram-frame" role="button" tabindex="0">
+                     <img src="Figma_parcel2.png" alt="Parcel Tracking UI Design" loading="lazy">
+                    <p class="diagram-caption">🎨 UI/UX Design (Figma)</p>
+                </div>
+            </div>
+
+            <h4 style="color: #667eea; margin-top: 2rem; font-size: 1.3rem;">📊 Data Analytics & Technical Implementation</h4>
+            <p style="color: #666; margin-bottom: 1rem;">
+                Advanced technical implementation demonstrating end-to-end data skills, from complex SQL queries for data extraction to Python for data simulation and visualization.
+            </p>
+
+            <div class="diagram-grid">
+                <div class="diagram-frame" style="grid-column: 1 / -1; height: auto;" role="button" tabindex="0">
+                    <img src="dashboard_bit_express.png" alt="Delivery Performance Dashboard with charts" style="width: 100%; height: auto; max-height: none; object-fit: contain;" loading="lazy">
+                    <p class="diagram-caption">📈 Delivery Performance Dashboard (The Result)</p>
+                </div>
+
+                <div class="diagram-frame" style="height: auto;" role="button" tabindex="0">
+                    <img src="python_code.png" alt="Python code for data visualization" style="width: 100%; height: auto; max-height: none; object-fit: contain;" loading="lazy">
+                    <p class="diagram-caption">🐍 Python Visualization Code (pandas/matplotlib)</p>
+                </div>
+
+                <div class="diagram-frame" style="height: auto;" role="button" tabindex="0">
+                    <img src="sql_query.png" alt="SQL query with joins and aggregations" style="width: 100%; height: auto; max-height: none; object-fit: contain;" loading="lazy">
+                    <p class="diagram-caption">💾 Complex SQL Query (JOINs & Aggregations)</p>
+                </div>
+            </div>
+
+            <div style="text-align: center; margin-top: 1.5rem;">
+                <a href="https://colab.research.google.com/drive/1B0I77EH51wRzEGx44r0RH1v8RQlVlKbI?usp=sharing" target="_blank" rel="noopener noreferrer" class="project-link" style="border: 2px solid #ff9f43; background: white; color: #ff9f43;">
+                    ▶️ View Full Python Source Code (Google Colab)
+                </a>
+            </div>
+            
+            <div class="project-links">
+                <a href="https://drive.google.com/drive/folders/1bCpRlWtbjHQNvn6YPVbx-_qj4qjMv-On?usp=sharing" target="_blank" rel="noopener noreferrer" class="project-link">📁 View Case study</a>
+                <a href="https://www.figma.com/design/87M1HJAEqAPXpuPgnzayJJ/Untitled?node-id=3-3212&p=f&t=ZPeGV9BiRtrCOpii-0" target="_blank" rel="noopener noreferrer" class="project-link">🎨 View Figma Design</a>
+                <a href="https://drive.google.com/drive/folders/1MY-z20XmJgEMxr7J-FKoVa6yJ_CF2tGz?usp=sharing" target="_blank" rel="noopener noreferrer" class="project-link">📄 View Full Documentation</a>
+            </div>
+        </div>
+    </section>
+
+    <section id="experience">
+        <h2>💼 Leadership & Experience</h2>
+        
+        <div class="timeline">
+            <div class="timeline-item">
+                <div class="timeline-date">2022 - Present (3 Years)</div>
+                <h3 style="margin-top: 0;">Head of Computer Science Department</h3>
+                <p style="color: #666; font-size: 1.1rem;">Kasetsart University Sriracha Campus</p>
+                
+                <div style="margin: 1.5rem 0; padding: 1rem; background: rgba(102, 126, 234, 0.1); border-radius: 8px;">
+                    <p style="color: #667eea; font-weight: 600;">🎯 Scope: Managing 300+ students & 20+ Events</p>
+                </div>
+
+                <ul style="margin: 1rem 0 0 2rem; line-height: 2;">
+                    <li>Led departmental operations for <strong>300+ students</strong> across regular and special programs.</li>
+                    <li>Coordinated <strong>20+ major events</strong> (orientation, sports, exhibitions) with zero incidents.</li>
+                    <li>Served as primary liaison between students, faculty (20+ professors), and external vendors.</li>
+                    <li>Established systematic processes improving operational efficiency by <strong>40%</strong>.</li>
+                    <li>Resolved conflicts and handled crisis management for student-related issues.</li>
+                </ul>
+            </div>
+            
+            <div class="timeline-item">
+                <div class="timeline-date">2022 - Present</div>
+                <h3 style="margin-top: 0;">Master of Ceremonies (MC) & Event Organizer</h3>
+                <p style="color: #666; font-size: 1.1rem;">University & Faculty Events</p>
+                
+                <ul style="margin: 1rem 0 0 2rem; line-height: 2;">
+                    <li>Hosted <strong>20+ major events</strong> as MC for audiences up to <strong>3,000+ participants</strong>.</li>
+                    <li>Organized <strong>university-wide E-sport ROV tournament</strong> (100+ participants).</li>
+                    <li>Collaborated on multi-campus projects (Bangkhen, Sriracha, Kamphaeng Saen).</li>
+                    <li>Created promotional content reaching <strong>10,000+ views</strong> on TikTok/Social Media.</li>
+                </ul>
+            </div>
+        </div>
+    </section>
+
+    <section id="skills">
+        <h2>🛠️ Technical Skills</h2>
+        
+        <div class="skills-grid">
+            <div class="skill-category">
+                <h4>💻 Programming Languages</h4>
+                <ul>
+                    <li><strong>Web </strong> : HTML, CSS, JavaScript</li>
+                    <li><strong>Data & DB </strong> : SQL, Python, R</li>
+                    <li><strong>Core </strong> : C, C++</li>
+                </ul>
+            </div>
+            
+            <div class="skill-category">
+                <h4>📊 Database & Data</h4>
+                <ul>
+                    <li>Microsoft SQL Server</li>
+                    <li>Power BI (Data Visualization)</li>
+                    <li>Google Colab</li>
+                    <li>Data Analysis & Modeling</li>
+                </ul>
+            </div>
+            
+            <div class="skill-category">
+                <h4>🎨 Design & Prototyping</h4>
+                <ul>
+                    <li><strong>UI/UX </strong> : Figma, Adobe Photoshop</li>
+                    <li><strong>Diagrams </strong> : Draw.io (Flowchart, DFD, ERD)</li>
+                    <li><strong>Presentation </strong> : Canva</li>
+                </ul>
+            </div>
+            
+            <div class="skill-category">
+                <h4>⚙️ Tools & SA/Audit</h4>
+                <ul>
+                    <li><strong>IDE/Tools </strong> : Visual Studio Code, GDB</li>
+                    <li><strong>Office </strong> : Microsoft Office Suite</li>
+                    <li><strong>Frameworks </strong> : COSO (Risk), Agile, SDLC</li>
+                    <li><strong>Docs </strong> : RCM, SRS, Use Case</li>
+                </ul>
+            </div>
+        </div>
+    </section>
+
+    <section id="achievements">
+        <h2>🏆 Achievements & Certifications</h2>
+        
+        <div class="skills-grid">
+            <div class="skill-category" style="border-left-color: #ffc107;">
+                <h4>🌟 Leadership Excellence</h4>
+                <p>3-Year Tenure as Dept. Head managing 300+ students and improving efficiency by 40%.</p>
+            </div>
+            
+            <div class="skill-category" style="border-left-color: #28a745;">
+                <h4>🎤 Public Speaking</h4>
+                <p>Host of 20+ events with audiences up to 3,000+ people and 10k+ social media views.</p>
+            </div>
+
+            <div class="skill-category" style="border-left-color: #dc3545;">
+                <h4>🚀 Project Success</h4>
+                <p>Delivered "Bit Express" system with 128-page documentation and 100% risk control coverage.</p>
+            </div>
+        </div>
+        
+        <h3 style="margin-top: 3rem;">📜 Professional Certifications</h3>
+        
+        <div class="cert-grid">
+            <div class="cert-card" style="border-left-color: #0d47a1;">
+                <div class="cert-header">
+                    <span class="cert-tag" style="background: #e3f2fd; color: #0d47a1;">Network & Infra</span>
+                    <span style="color: #999; font-size: 0.8rem;">Valid until 2028</span>
+                </div>
+                <strong style="font-size: 1.1rem; color: #1a1a2e; display: block; margin-bottom: 0.5rem;">
+                    LINK Certified Network Cabling for Engineering (LCCE)
+                </strong>
+                <p style="color: #666; font-size: 0.95rem;">Issued by LINK Asia Limited</p>
+            </div>
+
+            <div class="cert-card" style="border-left-color: #856404;">
+                <div class="cert-header">
+                    <span class="cert-tag" style="background: #fff3cd; color: #856404;">Leadership</span>
+                    <span style="color: #999; font-size: 0.8rem;">2024</span>
+                </div>
+                <strong style="font-size: 1.1rem; color: #1a1a2e; display: block; margin-bottom: 0.5rem;">
+                    Outstanding Student Leader Award (Type 2)
+                </strong>
+                <p style="color: #666; font-size: 0.95rem;">Faculty of Science at Sriracha, KU</p>
+            </div>
+
+            <div class="cert-card" style="border-left-color: #0f5132;">
+                <div class="cert-header">
+                    <span class="cert-tag" style="background: #d1e7dd; color: #0f5132;">Web Development</span>
+                    <span style="color: #999; font-size: 0.8rem;">2024</span>
+                </div>
+                <strong style="font-size: 1.1rem; color: #1a1a2e; display: block; margin-bottom: 0.5rem;">
+                    Web Application Development with Next.js
+                </strong>
+                <p style="color: #666; font-size: 0.95rem;">Dept. of CS, KU Sriracha</p>
+            </div>
+        </div>
+
+        <div style="text-align: center; margin-top: 2rem;">
+            <a href="https://drive.google.com/drive/folders/1_y6ZPX54N3rgm8TI100gkDx73Tr5rKTM?usp=sharing" target="_blank" rel="noopener noreferrer" class="btn" style="display: inline-flex; align-items: center; gap: 0.5rem;">
+                📂 View Certificate Evidence (Google Drive)
+            </a>
+        </div>
+    </section>
+
+    <section id="gallery">
+        <h2>📸 Leadership & Activities</h2>
+        <p style="margin-bottom: 2rem; color: #666;">
+            Highlights of my journey as a Faculty Representative and Activity Leader. (Click to view full size)
+        </p>
+        
+        <div class="gallery-grid">
+            <div class="gallery-item" role="button" tabindex="0">
+                <img src="Faculty flag.jpg" alt="Panyarat carrying faculty flag at official ceremony" loading="lazy">
+                <div class="gallery-overlay">
+                    <span style="font-size: 1.2rem;">🚩 Faculty Flag Bearer</span>
+                    <br>Official Representative of Faculty of Science
+                </div>
+            </div>
+
+            <div class="gallery-item" role="button" tabindex="0">
+                <img src="Thaioil.jpg" alt="Industrial visit to Thaioil facility" loading="lazy">
+                <div class="gallery-overlay">
+                    <span style="font-size: 1.2rem;">🏭 Industrial Visit</span>
+                    <br>Learning operations at Thaioil
+                </div>
+            </div>
+
+            <div class="gallery-item" role="button" tabindex="0">
+                <img src="Me2.jpg" alt="Panyarat leading department activities" loading="lazy">
+                <div class="gallery-overlay">
+                    <span style="font-size: 1.2rem;">👥 Activity Leader</span>
+                    <br>Head of CS Department Activities
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="contact">
+        <h2>📞 Get in Touch</h2>
+        <p style="text-align: center; margin-bottom: 3rem; font-size: 1.1rem;">
+            Ready to contribute my skills in IT Audit, System Analysis, or Business Analysis.
+        </p>
+        
+        <div class="contact-container">
+            <a href="mailto:panyarat.n@ku.th" class="contact-card" aria-label="Send email to Panyarat">
+                <div class="contact-icon">📧</div>
+                <h4>Email</h4>
+                <p>panyarat.n@ku.th</p>
+                <p class="link-text">Send Email →</p>
+            </a>
+            
+            <a href="tel:+66931492997" class="contact-card" aria-label="Call Panyarat">
+                <div class="contact-icon">📱</div>
+                <h4>Phone</h4>
+                <p>093-149-2997</p>
+                <p class="link-text">Call Now →</p>
+            </a>
+            
+            <a href="https://www.linkedin.com/in/panyarat-netruen-282760393/" target="_blank" rel="noopener noreferrer" class="contact-card" aria-label="View LinkedIn profile">
+                <div class="contact-icon">💼</div>
+                <h4>LinkedIn</h4>
+                <p>Connect professionally</p>
+                <p class="link-text">View Profile →</p>
+            </a>
+        </div>
+    </section>
+
+    <a href="#main-content" class="back-to-top" id="backToTop" aria-label="Back to top">↑</a>
+
+    <footer>
+        <p>© 2025 Panyarat Netrune. All Rights Reserved.</p>
+        <p>Built with ❤️ using HTML, CSS, and Passion.</p>
+        <p style="margin-top: 1rem; font-size: 0.9rem;">
+            <a href="mailto:panyarat.n@ku.th">Contact</a> | 
+            <a href="https://www.linkedin.com/in/panyarat-netruen-282760393/" target="_blank" rel="noopener noreferrer">LinkedIn</a>
+        </p>
+    </footer>
+
+    <script>
+        // Hamburger Menu Toggle
+        const menuToggle = document.getElementById('menuToggle');
+        const navMenu = document.getElementById('navMenu');
+        
+        menuToggle.addEventListener('click', () => {
+            const isOpen = navMenu.classList.toggle('active');
+            menuToggle.setAttribute('aria-expanded', isOpen);
+            menuToggle.textContent = isOpen ? '✕' : '☰';
+        });
+
+        // Close menu when clicking a link (mobile)
+        const navLinks = document.querySelectorAll('nav ul li a');
+        navLinks.forEach(link => {
+            link.addEventListener('click', () => {
+                if (window.innerWidth <= 768) {
+                    navMenu.classList.remove('active');
+                    menuToggle.setAttribute('aria-expanded', 'false');
+                    menuToggle.textContent = '☰';
+                }
+            });
+        });
+
+        // Close menu when clicking outside (mobile)
+        document.addEventListener('click', (e) => {
+            if (window.innerWidth <= 768 && 
+                !navMenu.contains(e.target) && 
+                !menuToggle.contains(e.target) &&
+                navMenu.classList.contains('active')) {
+                navMenu.classList.remove('active');
+                menuToggle.setAttribute('aria-expanded', 'false');
+                menuToggle.textContent = '☰';
+            }
+        });
+
+        // Scroll Progress Bar & Menu Highlight
+        window.addEventListener('scroll', () => {
+            // 1. Progress Bar
+            const winScroll = document.body.scrollTop || document.documentElement.scrollTop;
+            const height = document.documentElement.scrollHeight - document.documentElement.clientHeight;
+            const scrolled = (winScroll / height) * 100;
+            document.getElementById("progressBar").style.width = scrolled + "%";
+            
+            // 2. Back to Top Button
+            const backToTop = document.getElementById("backToTop");
+            if (winScroll > 300) {
+                backToTop.classList.add("show");
+            } else {
+                backToTop.classList.remove("show");
+            }
+
+            // 3. Active Menu Highlight
+            const sections = document.querySelectorAll('section, header.hero');
+            
+            // Check if bottom of page
+            if ((window.innerHeight + window.scrollY) >= document.body.offsetHeight - 10) {
+                navLinks.forEach(link => link.classList.remove('active'));
+                if(navLinks.length > 0) {
+                    navLinks[navLinks.length - 1].classList.add('active');
+                }
+            } else {
+                let current = "";
+                sections.forEach(sec => {
+                    const sectionTop = sec.offsetTop;
+                    if (scrollY >= (sectionTop - 200)) { 
+                        current = sec.getAttribute('id');
+                    }
+                });
+
+                navLinks.forEach(link => {
+                    link.classList.remove('active');
+                    if (link.getAttribute('href').includes(current) && current !== "") {
+                        link.classList.add('active');
+                    }
+                });
+            }
+        });
+
+        // Lightbox functionality
+        const images = document.querySelectorAll('.gallery-item img, .diagram-frame img');
+        const lightbox = document.getElementById('lightbox');
+        const lightboxImg = document.getElementById('lightbox-img');
+        const closeBtn = document.querySelector('.close-lightbox');
+
+        // Open lightbox
+        images.forEach(img => {
+            img.parentElement.addEventListener('click', function() {
+                lightbox.classList.add('active');
+                lightboxImg.src = img.src;
+                lightboxImg.alt = img.alt;
+                document.body.style.overflow = 'hidden'; // Prevent background scrolling
+            });
+
+            // Keyboard support
+            img.parentElement.addEventListener('keypress', function(e) {
+                if (e.key === 'Enter' || e.key === ' ') {
+                    e.preventDefault();
+                    lightbox.classList.add('active');
+                    lightboxImg.src = img.src;
+                    lightboxImg.alt = img.alt;
+                    document.body.style.overflow = 'hidden';
+                }
+            });
+        });
+
+        // Close lightbox - X button
+        closeBtn.addEventListener('click', closeLightbox);
+        closeBtn.addEventListener('keypress', (e) => {
+            if (e.key === 'Enter' || e.key === ' ') {
+                e.preventDefault();
+                closeLightbox();
+            }
+        });
+
+        // Close lightbox - click outside
+        lightbox.addEventListener('click', (e) => {
+            if (e.target === lightbox) {
+                closeLightbox();
+            }
+        });
+
+        // Close lightbox - ESC key
+        document.addEventListener('keydown', (e) => {
+            if (e.key === 'Escape' && lightbox.classList.contains('active')) {
+                closeLightbox();
+            }
+        });
+
+        function closeLightbox() {
+            lightbox.classList.remove('active');
+            document.body.style.overflow = ''; // Restore scrolling
+        }
+
+        // Lazy loading fallback for older browsers
+        if ('loading' in HTMLImageElement.prototype) {
+            // Browser supports lazy loading
+        } else {
+            // Fallback for browsers that don't support lazy loading
+            const lazyImages = document.querySelectorAll('img[loading="lazy"]');
+            lazyImages.forEach(img => {
+                img.src = img.src; // Force load
+            });
+        }
+
+        // Performance: Preload critical images
+        const criticalImage = new Image();
+        criticalImage.src = 'Me3.jpg';
+    </script>
+</body>
+</html>
