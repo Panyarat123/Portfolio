@@ -53,7 +53,7 @@
             --text-heading: #f8fafc;  /* White Smoke (หัวข้อเด่น) */
             --shadow: rgba(0,0,0,0.3);
             --border-color: #475569;
-            --nav-bg: rgba(15, 23, 42, 0.95);
+            --nav-bg: rgba(15, 17, 42, 0.95);
         }
 
         * {
@@ -401,7 +401,7 @@
             color: #667eea;
         }
 
-        /* 2. Floating Download Resume (NEW) */
+        /* Floating Download Resume */
         .floating-resume {
             position: fixed;
             bottom: 90px; /* เหนือปุ่ม Back to Top */
@@ -634,6 +634,7 @@
             object-fit: contain;
             border-radius: 8px;
             background-color: #f0f0f0; 
+            cursor: zoom-in; /* Indicate zoomable */
         }
 
         /* Fix diagram image background in dark mode */
@@ -675,11 +676,11 @@
             transform: translateY(-2px);
         }
 
-        /* 3. Modal Styles (NEW) */
+        /* Modal Styles */
         .modal {
             display: none;
             position: fixed;
-            z-index: 2001; /* Higher than nav/lightbox */
+            z-index: 2001; /* Higher than nav but lower than lightbox now */
             left: 0;
             top: 0;
             width: 100%;
@@ -876,7 +877,7 @@
         .lightbox {
             display: none;
             position: fixed;
-            z-index: 2000;
+            z-index: 9999; /* Increased Z-Index to be higher than Modal */
             padding-top: 50px;
             left: 0;
             top: 0;
@@ -971,7 +972,7 @@
             font-weight: 600;
         }
 
-        /* 4. Contact Form (NEW) */
+        /* Contact Form */
         .contact-form-wrapper {
             max-width: 600px;
             margin: 0 auto;
@@ -1431,7 +1432,9 @@
                 Found that the "Furniture" category (specifically Tables) was causing significant losses due to excessive discounts.
             </p>
             <div style="margin-top: 1.5rem; text-align: center;">
-                <img src="dashboard.png" style="max-width: 100%; border-radius: 8px; box-shadow: 0 4px 10px rgba(0,0,0,0.1);">
+                <div class="diagram-frame" style="border:none; box-shadow:none;">
+                    <img src="dashboard.png" style="max-width: 100%; border-radius: 8px; box-shadow: 0 4px 10px rgba(0,0,0,0.1);">
+                </div>
                 <p class="diagram-caption">Power BI Dashboard</p>
             </div>
         </div>
@@ -1447,8 +1450,8 @@
                 and constantly monitors them. If a hacker modifies a file, the tool alerts immediately.
             </p>
             <div style="display: flex; gap: 1rem; margin-top: 1.5rem; overflow-x: auto;">
-                <img src="audit_result.png" style="height: 200px; border-radius: 8px;">
-                <img src="audit_code.png" style="height: 200px; border-radius: 8px;">
+                <div class="diagram-frame" style="flex: 0 0 auto; width: auto;"><img src="audit_result.png" style="height: 200px; border-radius: 8px;"></div>
+                <div class="diagram-frame" style="flex: 0 0 auto; width: auto;"><img src="audit_code.png" style="height: 200px; border-radius: 8px;"></div>
             </div>
         </div>
     </div>
