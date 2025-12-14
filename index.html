@@ -1,6 +1,14 @@
 <!DOCTYPE html>
 <html lang="th">
 <head>
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-6G2TMB6NVB"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+      gtag('config', 'G-6G2TMB6NVB');
+    </script>
+
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Panyarat Netrune | IT Audit & System Analysis Portfolio</title>
@@ -90,7 +98,7 @@
         }
 
         /* Elements Transition for Theme Switch */
-        section, .project-card, .stat-card, h2, h3, h4, p, li, span {
+        section, .project-card, .stat-card, h2, h3, h4, p, li, span, input, textarea {
             transition: background-color 0.3s ease, color 0.3s ease, border-color 0.3s ease;
         }
 
@@ -111,10 +119,14 @@
         [data-theme="dark"] .skill-category,
         [data-theme="dark"] .cert-card,
         [data-theme="dark"] .contact-card,
-        [data-theme="dark"] .diagram-frame {
+        [data-theme="dark"] .diagram-frame,
+        [data-theme="dark"] .modal-content,
+        [data-theme="dark"] input, 
+        [data-theme="dark"] textarea {
             background: var(--bg-section) !important;
             border-color: var(--border-color);
             box-shadow: 0 4px 6px rgba(0,0,0,0.2);
+            color: var(--text-main);
         }
 
         [data-theme="dark"] .skill-category {
@@ -370,6 +382,8 @@
             transition: all 0.3s;
             box-shadow: 0 4px 15px rgba(0,0,0,0.2);
             border: 2px solid white;
+            cursor: pointer;
+            display: inline-block;
         }
         
         .btn:hover {
@@ -385,6 +399,30 @@
         .btn-outline:hover {
             background: white;
             color: #667eea;
+        }
+
+        /* 2. Floating Download Resume (NEW) */
+        .floating-resume {
+            position: fixed;
+            bottom: 90px; /* เหนือปุ่ม Back to Top */
+            right: 30px;
+            background: #ff9f43; /* สีส้มให้เด่น */
+            color: white;
+            width: 50px;
+            height: 50px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-decoration: none;
+            font-size: 1.5rem;
+            box-shadow: 0 4px 15px rgba(255, 159, 67, 0.5);
+            z-index: 999;
+            transition: transform 0.3s;
+        }
+        .floating-resume:hover {
+            transform: scale(1.1);
+            background: #ffa502;
         }
 
         /* Container */
@@ -636,6 +674,58 @@
             background: #667eea;
             transform: translateY(-2px);
         }
+
+        /* 3. Modal Styles (NEW) */
+        .modal {
+            display: none;
+            position: fixed;
+            z-index: 2001; /* Higher than nav/lightbox */
+            left: 0;
+            top: 0;
+            width: 100%;
+            height: 100%;
+            overflow: auto;
+            background-color: rgba(0,0,0,0.8);
+            backdrop-filter: blur(5px);
+            opacity: 0;
+            transition: opacity 0.3s ease;
+        }
+
+        .modal.show {
+            display: block;
+            opacity: 1;
+        }
+
+        .modal-content {
+            background-color: var(--bg-section);
+            margin: 5% auto;
+            padding: 2rem;
+            border: 1px solid var(--border-color);
+            border-radius: 15px;
+            width: 90%;
+            max-width: 900px;
+            position: relative;
+            transform: translateY(-50px);
+            transition: transform 0.3s ease;
+            box-shadow: 0 10px 40px rgba(0,0,0,0.5);
+        }
+
+        .modal.show .modal-content {
+            transform: translateY(0);
+        }
+
+        .close-modal {
+            color: var(--text-muted);
+            float: right;
+            font-size: 28px;
+            font-weight: bold;
+            cursor: pointer;
+            transition: color 0.3s;
+        }
+
+        .close-modal:hover {
+            color: var(--primary);
+        }
         
         /* Timeline */
         .timeline {
@@ -841,6 +931,7 @@
             justify-content: center;
             gap: 2rem;
             flex-wrap: wrap;
+            margin-bottom: 3rem;
         }
 
         .contact-card {
@@ -878,6 +969,56 @@
         .contact-card p.link-text {
             color: #667eea;
             font-weight: 600;
+        }
+
+        /* 4. Contact Form (NEW) */
+        .contact-form-wrapper {
+            max-width: 600px;
+            margin: 0 auto;
+            background: var(--bg-card);
+            padding: 2.5rem;
+            border-radius: 15px;
+            box-shadow: 0 5px 20px var(--shadow);
+            border: 1px solid var(--border-color);
+        }
+
+        .form-group {
+            margin-bottom: 1.5rem;
+        }
+
+        .form-control {
+            width: 100%;
+            padding: 12px;
+            border-radius: 8px;
+            border: 1px solid var(--border-color);
+            background: var(--bg-body);
+            color: var(--text-main);
+            font-family: inherit;
+            font-size: 1rem;
+            transition: border-color 0.3s, box-shadow 0.3s;
+        }
+
+        .form-control:focus {
+            outline: none;
+            border-color: var(--primary);
+            box-shadow: 0 0 0 3px rgba(102, 126, 234, 0.2);
+        }
+
+        .btn-submit {
+            width: 100%;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            border: none;
+            padding: 12px;
+            font-size: 1.1rem;
+            border-radius: 8px;
+            cursor: pointer;
+            transition: transform 0.2s, box-shadow 0.2s;
+        }
+
+        .btn-submit:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 5px 15px rgba(102, 126, 234, 0.4);
         }
 
         /* Toast Notification */
@@ -920,7 +1061,7 @@
             pointer-events: none;
             transition: all 0.3s;
             box-shadow: 0 4px 15px rgba(102, 126, 234, 0.5);
-            z-index: 999;
+            z-index: 998; /* Lower than modal/resume btn */
             font-size: 1.5rem;
             text-decoration: none;
         }
@@ -1001,6 +1142,11 @@
             .stats { grid-template-columns: 1fr; }
             .diagram-grid { grid-template-columns: 1fr; }
             .project-header { flex-direction: column; }
+            
+            .modal-content {
+                width: 95%;
+                margin: 20% auto; /* More margin on mobile */
+            }
         }
 
         /* Accessibility */
@@ -1163,103 +1309,26 @@
                 <div>
                     <h3 style="margin: 0; color: var(--text-heading);">Bit Express Smart Delivery System</h3>
                     <p style="color: var(--text-muted); margin-top: 0.5rem; font-size: 1.05rem;">
-                        🚚 End-to-End Logistics Platform | 📅 Jan - Apr 2024 | 👥 Team of 6
+                        🚚 End-to-End Logistics Platform | 📅 Jan - Apr 2024
                     </p>
                 </div>
                 <div class="project-tags">
                     <span class="tag">System Analysis</span>
                     <span class="tag">IT Audit</span>
                     <span class="tag">Risk Management</span>
-                    <span class="tag">UI/UX Design</span>
                 </div>
             </div>
             
             <p style="margin: 1.5rem 0; font-size: 1.1rem; line-height: 1.8; color: var(--text-main);">
-                Designed comprehensive logistics platform connecting <strong>Senders, Riders, and Receivers</strong> 
-                with real-time tracking, automated notifications, and digital proof of delivery (e-POD). 
-                The system addresses critical pain points in traditional parcel delivery through technology-driven solutions.
+                Designed comprehensive logistics platform connecting Senders, Riders, and Receivers.
+                Included Risk Control Matrix (RCM) using COSO Framework.
             </p>
-            
-            <h4 style="color: #667eea; margin-top: 2rem; font-size: 1.3rem;">🎯 Key Contributions:</h4>
-            <ul style="margin-left: 2rem; line-height: 2; color: var(--text-main);">
-                <li><strong>Business Analysis:</strong> Analyzed pain points from 300+ potential users.</li>
-                <li><strong>System Design:</strong> Created DFD (Level 0-1), Class Diagram, and Activity Diagrams.</li>
-                <li><strong>Risk Analysis (IT Audit Focus):</strong> Developed <strong>Risk Control Matrix (RCM)</strong> using COSO Framework covering Authentication, Data Integrity, and Fraud Prevention.</li>
-                <li><strong>UI/UX:</strong> Designed 50+ screens using Figma for Customer and Rider apps.</li>
-                <li><strong>Documentation:</strong> Authored 128-page technical documentation.</li>
-            </ul>
-            
-            <h4 style="color: #667eea; margin-top: 2rem; font-size: 1.3rem;">📊 Impact:</h4>
-            <ul style="margin-left: 2rem; line-height: 2; color: var(--text-main);">
-                <li>✅ <strong>100% control coverage</strong> for critical risks identified.</li>
-                <li>✅ Projected to <strong>reduce customer inquiries by 80%</strong> via real-time tracking.</li>
-            </ul>
-
-            <h4 style="color: #667eea; margin-top: 2rem; font-size: 1.3rem;">📐 System Design & Artifacts (Click to Enlarge):</h4>
-            <div class="diagram-grid">
-                <div class="diagram-frame" role="button" tabindex="0">
-                    <img src="dfd_level1.jpg" alt="Data Flow Diagram showing system processes" loading="lazy">
-                    <p class="diagram-caption">🔄 Data Flow Diagram</p>
-                </div>
-
-                <div class="diagram-frame" role="button" tabindex="0">
-                     <img src="class_diagram.png" alt="Class Diagram showing system architecture" loading="lazy">
-                    <p class="diagram-caption">🗄️ Class Diagram</p>
-                </div>
-
-                <div class="diagram-frame" role="button" tabindex="0">
-                     <img src="risk_control.png" alt="Risk Control Matrix" loading="lazy">
-                    <p class="diagram-caption">🛡️ Risk & Internal Controls</p>
-                </div>
-                
-                <div class="diagram-frame" role="button" tabindex="0">
-                     <img src="Figma_Home1.png" alt="UI Design Homepage Mockup" loading="lazy">
-                    <p class="diagram-caption">🎨 UI/UX Design (Figma)</p>
-                </div>
-
-                <div class="diagram-frame" role="button" tabindex="0">
-                     <img src="Figma_Home.png" alt="UI Design Alternative Homepage" loading="lazy">
-                    <p class="diagram-caption">🎨 UI/UX Design (Figma)</p>
-                </div>
-
-                <div class="diagram-frame" role="button" tabindex="0">
-                     <img src="Figma_parcel2.png" alt="Parcel Tracking UI Design" loading="lazy">
-                    <p class="diagram-caption">🎨 UI/UX Design (Figma)</p>
-                </div>
-            </div>
-
-            <h4 style="color: #667eea; margin-top: 2rem; font-size: 1.3rem;">📊 Data Analytics & Technical Implementation</h4>
-            <p style="color: var(--text-muted); margin-bottom: 1rem;">
-                Advanced technical implementation demonstrating end-to-end data skills, from complex SQL queries for data extraction to Python for data simulation and visualization.
-            </p>
-
-            <div class="diagram-grid">
-                <div class="diagram-frame" style="grid-column: 1 / -1; height: auto;" role="button" tabindex="0">
-                    <img src="dashboard_bit_express.png" alt="Delivery Performance Dashboard with charts" style="width: 100%; height: auto; max-height: none; object-fit: contain;" loading="lazy">
-                    <p class="diagram-caption">📈 Delivery Performance Dashboard (The Result)</p>
-                </div>
-
-                <div class="diagram-frame" style="height: auto;" role="button" tabindex="0">
-                    <img src="python_code.png" alt="Python code for data visualization" style="width: 100%; height: auto; max-height: none; object-fit: contain;" loading="lazy">
-                    <p class="diagram-caption">🐍 Python Visualization Code (pandas/matplotlib)</p>
-                </div>
-
-                <div class="diagram-frame" style="height: auto;" role="button" tabindex="0">
-                    <img src="sql_query.png" alt="SQL query with joins and aggregations" style="width: 100%; height: auto; max-height: none; object-fit: contain;" loading="lazy">
-                    <p class="diagram-caption">💾 Complex SQL Query (JOINs & Aggregations)</p>
-                </div>
-            </div>
-
-            <div style="text-align: center; margin-top: 1.5rem;">
-                <a href="https://colab.research.google.com/drive/1B0I77EH51wRzEGx44r0RH1v8RQlVlKbI?usp=sharing" target="_blank" rel="noopener noreferrer" class="project-link" style="border: 2px solid #ff9f43; background: white; color: #ff9f43;">
-                    ▶️ View Full Python Source Code (Google Colab)
-                </a>
-            </div>
             
             <div class="project-links">
-                <a href="https://drive.google.com/drive/folders/1bCpRlWtbjHQNvn6YPVbx-_qj4qjMv-On?usp=sharing" target="_blank" rel="noopener noreferrer" class="project-link">📁 View Case study</a>
-                <a href="https://www.figma.com/design/87M1HJAEqAPXpuPgnzayJJ/Untitled?node-id=3-3212&p=f&t=ZPeGV9BiRtrCOpii-0" target="_blank" rel="noopener noreferrer" class="project-link">🎨 View Figma Design</a>
-                <a href="https://drive.google.com/drive/folders/1MY-z20XmJgEMxr7J-FKoVa6yJ_CF2tGz?usp=sharing" target="_blank" rel="noopener noreferrer" class="project-link">📄 View Full Documentation</a>
+                <button onclick="openModal('modal-bit-express')" class="project-link" style="border:none; cursor:pointer; background:#667eea; color:white;">
+                    🔍 View Details / ดูรายละเอียด
+                </button>
+                <a href="https://drive.google.com/drive/folders/1bCpRlWtbjHQNvn6YPVbx-_qj4qjMv-On?usp=sharing" target="_blank" class="project-link">📁 Case Study</a>
             </div>
         </div>
 
@@ -1268,41 +1337,26 @@
                 <div>
                     <h3 style="margin: 0; color: var(--text-heading);">Superstore Sales & Profit Analysis</h3>
                     <p style="color: var(--text-muted); margin-top: 0.5rem; font-size: 1.05rem;">
-                        📊 Data Analytics & Business Intelligence | 📅 Oct 2025 | 👤 Individual Project
+                        📊 Data Analytics | 📅 Oct 2025
                     </p>
                 </div>
                 <div class="project-tags">
                     <span class="tag">SQL Analysis</span>
                     <span class="tag">Power BI</span>
                     <span class="tag">Business Intelligence</span>
-                    <span class="tag">Data Visualization</span>
                 </div>
             </div>
             
             <p style="margin: 1.5rem 0; font-size: 1.1rem; line-height: 1.8; color: var(--text-main);">
-                A comprehensive data investigation into a retail giant's performance to solve the core business problem: 
-                <strong>"Why are profits low despite high sales revenue?"</strong> Used SQL for data extraction and Power BI for visualization.
+                Solved "Why are profits low despite high sales?" using SQL and Power BI dashboarding.
             </p>
             
-            <h4 style="color: #667eea; margin-top: 2rem; font-size: 1.3rem;">🎯 Key Contributions:</h4>
-            <ul style="margin-left: 2rem; line-height: 2; color: var(--text-main);">
-                <li><strong>SQL Analysis:</strong> Wrote complex queries (JOINs, Aggregations) to identify loss-making products and profitable segments.</li>
-                <li><strong>Interactive Dashboard:</strong> Designed a Power BI dashboard to track KPIs like Total Sales, Profit Margin, and Regional Performance.</li>
-                <li><strong>Strategic Insight:</strong> Identified that the "Furniture" category (specifically Tables) was causing significant losses.</li>
-                <li><strong>Actionable Advice:</strong> Recommended restructuring the discount strategy to recover 15% profit margin.</li>
-            </ul>
-            
-            <h4 style="color: #667eea; margin-top: 2rem; font-size: 1.3rem;">📊 Project Artifacts (Click to Enlarge):</h4>
-            <div class="diagram-grid">
-                <div class="diagram-frame" style="grid-column: 1 / -1; height: auto;" role="button" tabindex="0">
-                     <img src="dashboard.png" alt="Power BI Dashboard" style="width: 100%; height: auto; max-height: none; object-fit: contain;" loading="lazy">
-                    <p class="diagram-caption">📊 Power BI Dashboard (Full View)</p>
-                </div>
-            </div>
-            
             <div class="project-links">
-                <a href="https://github.com/Panyarat123/Superstore-Sales-Analysis" target="_blank" rel="noopener noreferrer" class="project-link" style="background: #24292e; color: white;">
-                    💻 View GitHub Repository (Code & SQL)
+                 <button onclick="openModal('modal-superstore')" class="project-link" style="border:none; cursor:pointer; background:#667eea; color:white;">
+                    🔍 View Details / ดูรายละเอียด
+                </button>
+                <a href="https://github.com/Panyarat123/Superstore-Sales-Analysis" target="_blank" class="project-link" style="background: #24292e; color: white;">
+                    💻 GitHub Repo
                 </a>
             </div>
         </div>
@@ -1312,52 +1366,92 @@
                 <div>
                     <h3 style="margin: 0; color: var(--text-heading);">File Integrity Checker (IT Audit Tool)</h3>
                     <p style="color: var(--text-muted); margin-top: 0.5rem; font-size: 1.05rem;">
-                        🛡️ Automated Security Tool | 📅 Dec 2025 | 👤 Individual Project
+                        🛡️ Security Tool | 📅 Dec 2025
                     </p>
                 </div>
                 <div class="project-tags">
                     <span class="tag">Python</span>
                     <span class="tag">IT Audit</span>
                     <span class="tag">Cybersecurity</span>
-                    <span class="tag">Data Integrity</span>
-                    <span class="tag">SHA-256</span>
                 </div>
             </div>
             
             <p style="margin: 1.5rem 0; font-size: 1.1rem; line-height: 1.8; color: var(--text-main);">
-                A lightweight Python automation tool designed to verify <strong>Data Integrity</strong>—a core component of the <strong>CIA Triad</strong> in Information Security. 
-                This tool detects unauthorized file modifications, deletions, or creations using secure <strong>SHA-256 Hashing</strong> algorithms.
+                Automated tool to detect unauthorized file modifications using SHA-256 Hashing.
             </p>
             
-            <h4 style="color: #667eea; margin-top: 2rem; font-size: 1.3rem;">🎯 Key Contributions:</h4>
-            <ul style="margin-left: 2rem; line-height: 2; color: var(--text-main);">
-                <li><strong>Automated Auditing:</strong> Developed a script to generate a "Baseline" (Digital Fingerprint) of critical files.</li>
-                <li><strong>Real-time Monitoring:</strong> Implemented a monitoring loop to compare current file states against the baseline.</li>
-                <li><strong>Alert System:</strong> Designed a notification system that flags <strong>"Modified"</strong>, <strong>"New"</strong>, or <strong>"Deleted"</strong> files instantly.</li>
-                <li><strong>CIA Triad Application:</strong> Applied theoretical integrity concepts into a practical, working software tool.</li>
-            </ul>
-            
-            <h4 style="color: #667eea; margin-top: 2rem; font-size: 1.3rem;">💻 Tool Demonstration (Click to Enlarge):</h4>
-            <div class="diagram-grid">
-                <div class="diagram-frame" role="button" tabindex="0">
-                     <img src="audit_result.png" alt="Terminal showing Red Alert for modified file" loading="lazy">
-                    <p class="diagram-caption">🔴 Automated Alert System (Terminal)</p>
-                </div>
-
-                <div class="diagram-frame" role="button" tabindex="0">
-                     <img src="audit_code.png" alt="Python Code Logic" loading="lazy">
-                    <p class="diagram-caption">🐍 Python Logic & Hashing Implementation</p>
-                </div>
-            </div>
-            
             <div class="project-links">
-                <a href="https://github.com/Panyarat123/File-Integrity-Checker" target="_blank" rel="noopener noreferrer" class="project-link" style="background: #24292e; color: white;">
-                    💻 View GitHub Repository (Source Code)
+                <button onclick="openModal('modal-integrity')" class="project-link" style="border:none; cursor:pointer; background:#667eea; color:white;">
+                    🔍 View Details / ดูรายละเอียด
+                </button>
+                <a href="https://github.com/Panyarat123/File-Integrity-Checker" target="_blank" class="project-link" style="background: #24292e; color: white;">
+                    💻 GitHub Repo
                 </a>
             </div>
         </div>
 
     </section>
+
+    <div id="modal-bit-express" class="modal">
+        <div class="modal-content">
+            <span class="close-modal" onclick="closeModal('modal-bit-express')">&times;</span>
+            <h2 style="color: var(--primary);">Bit Express Smart Delivery System</h2>
+            <p style="margin-bottom: 1rem;"><strong>Role:</strong> System Analyst & IT Audit Lead</p>
+            <p style="line-height: 1.8;">
+                Designed comprehensive logistics platform connecting Senders, Riders, and Receivers with real-time tracking, 
+                automated notifications, and digital proof of delivery (e-POD). 
+                The system addresses critical pain points in traditional parcel delivery.
+            </p>
+            <h4 style="margin-top: 1.5rem; color: var(--primary);">Key Highlights:</h4>
+            <ul style="margin-left: 1.5rem; margin-bottom: 1.5rem;">
+                <li><strong>Risk Analysis:</strong> Created Risk Control Matrix (RCM) covering Authentication & Fraud.</li>
+                <li><strong>System Design:</strong> Developed DFD Level 0-1 and Class Diagrams.</li>
+                <li><strong>Outcome:</strong> 100% control coverage for critical risks.</li>
+            </ul>
+            
+            <div class="diagram-grid" style="grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));">
+                <div class="diagram-frame"><img src="dfd_level1.jpg" alt="DFD"></div>
+                <div class="diagram-frame"><img src="risk_control.png" alt="Risk Control"></div>
+                <div class="diagram-frame"><img src="Figma_Home1.png" alt="UI Design"></div>
+            </div>
+            
+            <div style="margin-top: 2rem; text-align: center;">
+                 <a href="https://drive.google.com/drive/folders/1MY-z20XmJgEMxr7J-FKoVa6yJ_CF2tGz?usp=sharing" target="_blank" class="btn">📄 View Full Documentation</a>
+            </div>
+        </div>
+    </div>
+
+    <div id="modal-superstore" class="modal">
+        <div class="modal-content">
+            <span class="close-modal" onclick="closeModal('modal-superstore')">&times;</span>
+            <h2 style="color: var(--primary);">Superstore Sales Analysis</h2>
+            <p><strong>Tools:</strong> SQL, Power BI</p>
+            <p style="margin-top: 1rem;">
+                Investigated a retail giant's data to solve "Why are profits low despite high revenue?". 
+                Found that the "Furniture" category (specifically Tables) was causing significant losses due to excessive discounts.
+            </p>
+            <div style="margin-top: 1.5rem; text-align: center;">
+                <img src="dashboard.png" style="max-width: 100%; border-radius: 8px; box-shadow: 0 4px 10px rgba(0,0,0,0.1);">
+                <p class="diagram-caption">Power BI Dashboard</p>
+            </div>
+        </div>
+    </div>
+
+    <div id="modal-integrity" class="modal">
+        <div class="modal-content">
+            <span class="close-modal" onclick="closeModal('modal-integrity')">&times;</span>
+            <h2 style="color: var(--primary);">File Integrity Checker</h2>
+            <p><strong>Language:</strong> Python (SHA-256)</p>
+            <p style="margin-top: 1rem;">
+                A tool implementing the "Integrity" aspect of the CIA Triad. It creates a digital fingerprint (baseline) of files 
+                and constantly monitors them. If a hacker modifies a file, the tool alerts immediately.
+            </p>
+            <div style="display: flex; gap: 1rem; margin-top: 1.5rem; overflow-x: auto;">
+                <img src="audit_result.png" style="height: 200px; border-radius: 8px;">
+                <img src="audit_code.png" style="height: 200px; border-radius: 8px;">
+            </div>
+        </div>
+    </div>
 
     <section id="experience">
         <h2>💼 Leadership & Experience</h2>
@@ -1377,7 +1471,6 @@
                     <li>Coordinated <strong>20+ major events</strong> (orientation, sports, exhibitions) with zero incidents.</li>
                     <li>Served as primary liaison between students, faculty (20+ professors), and external vendors.</li>
                     <li>Established systematic processes improving operational efficiency by <strong>40%</strong>.</li>
-                    <li>Resolved conflicts and handled crisis management for student-related issues.</li>
                 </ul>
             </div>
             
@@ -1389,7 +1482,6 @@
                 <ul style="margin: 1rem 0 0 2rem; line-height: 2;">
                     <li>Hosted <strong>20+ major events</strong> as MC for audiences up to <strong>3,000+ participants</strong>.</li>
                     <li>Organized <strong>university-wide E-sport ROV tournament</strong> (100+ participants).</li>
-                    <li>Collaborated on multi-campus projects (Bangkhen, Sriracha, Kamphaeng Saen).</li>
                     <li>Created promotional content reaching <strong>10,000+ views</strong> on TikTok/Social Media.</li>
                 </ul>
             </div>
@@ -1542,30 +1634,43 @@
         <p style="text-align: center; margin-bottom: 3rem; font-size: 1.1rem;">
             Ready to contribute my skills in Business Analysis, System Analysis, or IT Audit.
         </p>
-        
+
         <div class="contact-container">
-            <a href="mailto:panyarat.n@ku.th" class="contact-card" aria-label="Send email to Panyarat">
-                <div class="contact-icon">📧</div>
-                <h4>Email</h4>
-                <p>panyarat.n@ku.th</p>
-                <p class="link-text">Send Email →</p>
-            </a>
-            
-            <a href="tel:+66931492997" class="contact-card" aria-label="Call Panyarat">
-                <div class="contact-icon">📱</div>
-                <h4>Phone</h4>
-                <p>093-149-2997</p>
-                <p class="link-text">Call Now →</p>
-            </a>
-            
-            <a href="https://www.linkedin.com/in/panyarat-netruen-282760393/" target="_blank" rel="noopener noreferrer" class="contact-card" aria-label="View LinkedIn profile">
-                <div class="contact-icon">💼</div>
-                <h4>LinkedIn</h4>
-                <p>Connect professionally</p>
-                <p class="link-text">View Profile →</p>
-            </a>
+            <div style="flex: 1; display:flex; flex-direction:column; gap:1.5rem; max-width: 350px;">
+                <a href="tel:+66931492997" class="contact-card" aria-label="Call Panyarat" style="width:100%;">
+                    <div class="contact-icon">📱</div>
+                    <h4>Phone</h4>
+                    <p>093-149-2997</p>
+                    <p class="link-text">Call Now →</p>
+                </a>
+                
+                <a href="https://www.linkedin.com/in/panyarat-netruen-282760393/" target="_blank" rel="noopener noreferrer" class="contact-card" aria-label="View LinkedIn profile" style="width:100%;">
+                    <div class="contact-icon">💼</div>
+                    <h4>LinkedIn</h4>
+                    <p>Connect professionally</p>
+                    <p class="link-text">View Profile →</p>
+                </a>
+             </div>
+
+            <div class="contact-form-wrapper" style="flex: 2;">
+                <h3 style="margin-bottom: 1.5rem; color: var(--text-heading);">✉️ Send me a Message</h3>
+                
+                <form action="https://formspree.io/f/xanrkdod" method="POST">
+                    <div class="form-group">
+                        <input type="email" name="email" class="form-control" placeholder="Your Email Address" required>
+                    </div>
+                    <div class="form-group">
+                        <textarea name="message" class="form-control" placeholder="Write your message here..." rows="5" required></textarea>
+                    </div>
+                    <button type="submit" class="btn-submit">🚀 Send Message</button>
+                </form>
+            </div>
         </div>
     </section>
+
+    <a href="https://drive.google.com/drive/folders/1hdIVUE8Q03VH0y9Dm-s6D6UYCFxW8dWE?usp=sharing" target="_blank" class="floating-resume" aria-label="Download Resume">
+        📄
+    </a>
 
     <a href="#main-content" class="back-to-top" id="backToTop" aria-label="Back to top">↑</a>
 
@@ -1593,9 +1698,33 @@
             closeLightbox: document.querySelector('.close-lightbox'),
             toast: document.getElementById('toast'),
             typingText: document.getElementById('typingText'),
-            // New Element for Dark Mode
             themeToggle: document.getElementById('themeToggle')
         };
+
+        // --- 3. Modal Logic (NEW) ---
+        function openModal(modalId) {
+            const modal = document.getElementById(modalId);
+            if (modal) {
+                modal.classList.add('show');
+                document.body.style.overflow = 'hidden'; // Prevent scrolling
+            }
+        }
+
+        function closeModal(modalId) {
+            const modal = document.getElementById(modalId);
+            if (modal) {
+                modal.classList.remove('show');
+                document.body.style.overflow = ''; // Restore scrolling
+            }
+        }
+
+        // Close modal if clicked outside
+        window.onclick = function(event) {
+            if (event.target.classList.contains('modal')) {
+                event.target.classList.remove('show');
+                document.body.style.overflow = '';
+            }
+        }
 
         // --- DARK MODE LOGIC START ---
         
@@ -1735,19 +1864,6 @@
             });
         });
 
-        // Close menu when clicking outside
-        document.addEventListener('click', (e) => {
-            if (window.innerWidth <= 768 && 
-                !DOM.navMenu.contains(e.target) && 
-                !DOM.menuToggle.contains(e.target) &&
-                DOM.navMenu.classList.contains('active')) {
-                DOM.navMenu.classList.remove('active');
-                DOM.menuToggle.classList.remove('active');
-                DOM.menuToggle.setAttribute('aria-expanded', 'false');
-                document.body.style.overflow = '';
-            }
-        });
-
         // Throttle function
         function throttle(func, wait) {
             let timeout;
@@ -1772,30 +1888,6 @@
                 DOM.backToTop.classList.add("show");
             } else {
                 DOM.backToTop.classList.remove("show");
-            }
-
-            const sections = document.querySelectorAll('section, header.hero');
-            
-            if ((window.innerHeight + window.scrollY) >= document.body.offsetHeight - 10) {
-                navLinks.forEach(link => link.classList.remove('active'));
-                if(navLinks.length > 0) {
-                    navLinks[navLinks.length - 1].classList.add('active');
-                }
-            } else {
-                let current = "";
-                sections.forEach(sec => {
-                    const sectionTop = sec.offsetTop;
-                    if (scrollY >= (sectionTop - 200)) { 
-                        current = sec.getAttribute('id');
-                    }
-                });
-
-                navLinks.forEach(link => {
-                    link.classList.remove('active');
-                    if (link.getAttribute('href').includes(current) && current !== "") {
-                        link.classList.add('active');
-                    }
-                });
             }
         });
 
@@ -1880,13 +1972,6 @@
             };
 
             img.parentElement.addEventListener('click', openLightbox);
-
-            img.parentElement.addEventListener('keypress', function(e) {
-                if (e.key === 'Enter' || e.key === ' ') {
-                    e.preventDefault();
-                    openLightbox();
-                }
-            });
         });
 
         function closeLightboxFunc() {
@@ -1895,12 +1980,6 @@
         }
 
         DOM.closeLightbox.addEventListener('click', closeLightboxFunc);
-        DOM.closeLightbox.addEventListener('keypress', (e) => {
-            if (e.key === 'Enter' || e.key === ' ') {
-                e.preventDefault();
-                closeLightboxFunc();
-            }
-        });
 
         DOM.lightbox.addEventListener('click', (e) => {
             if (e.target === DOM.lightbox) {
