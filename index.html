@@ -1374,6 +1374,38 @@
         <div class="project-card">
             <div class="project-header">
                 <div>
+                    <h3 style="margin: 0; color: var(--text-heading);">FactoryOne Inventory System</h3>
+                    <p style="color: var(--text-muted); margin-top: 0.5rem; font-size: 1.05rem;">
+                        🏭 Web Application Development | 📅 Dec 2025
+                    </p>
+                </div>
+                <div class="project-tags">
+                    <span class="tag">JavaScript (ES6+)</span>
+                    <span class="tag">SPA Architecture</span>
+                    <span class="tag">Tailwind CSS</span>
+                    <span class="tag">System Design</span>
+                </div>
+            </div>
+
+            <p style="margin: 1.5rem 0; font-size: 1.1rem; line-height: 1.8; color: var(--text-main);">
+                A robust Single Page Application (SPA) for inventory tracking. Built entirely with Vanilla JavaScript to demonstrate core DOM manipulation and state management without heavy frameworks. Features real-time dashboard analytics, full CRUD operations, and dark mode.
+            </p>
+
+            <div class="project-links">
+                <button onclick="openModal('modal-factory')" class="project-link" style="border:none; cursor:pointer; background:#667eea; color:white;">
+                    🔍 View Details / ดูรายละเอียด
+                </button>
+                <a href="https://panyarat123.github.io/Dev_Factory/" target="_blank" class="project-link" style="background: #28a745; color: white;">
+                    🌐 Live Demo
+                </a>
+                <a href="https://github.com/panyarat123/Dev_Factory" target="_blank" class="project-link" style="background: #24292e; color: white;">
+                     💻 GitHub
+                </a>
+            </div>
+        </div>
+        <div class="project-card">
+            <div class="project-header">
+                <div>
                     <h3 style="margin: 0; color: var(--text-heading);">Superstore Sales & Profit Analysis</h3>
                     <p style="color: var(--text-muted); margin-top: 0.5rem; font-size: 1.05rem;">
                         📊 Data Analytics | 📅 Oct 2025
@@ -1487,6 +1519,30 @@
         </div>
     </div>
 
+    <div id="modal-factory" class="modal">
+        <div class="modal-content">
+            <span class="close-modal" onclick="closeModal('modal-factory')">&times;</span>
+            <h2 style="color: var(--primary);">FactoryOne Inventory Management System</h2>
+            <p style="margin-bottom: 1rem;"><strong>Role:</strong> Full Stack Developer (Frontend Focus)</p>
+            <p style="line-height: 1.8;">
+                Developed a lightweight, responsive inventory system. The goal was to build a functional <strong>CRUD (Create, Read, Update, Delete)</strong> application with complex state management using only core web technologies (No React/Vue). This demonstrates a deep understanding of how web systems work under the hood.
+            </p>
+
+            <h4 style="margin-top: 1.5rem; color: var(--primary);">System Features:</h4>
+            <ul style="margin-left: 1.5rem; margin-bottom: 1.5rem; line-height: 1.6;">
+                <li><strong>Architecture:</strong> Single Page Application (SPA) with custom routing logic (Dashboard, Inventory, Production, Scanner).</li>
+                <li><strong>Data Management:</strong> Implemented LocalStorage for data persistence (Client-side database simulation).</li>
+                <li><strong>Analytics:</strong> Integrated Chart.js for real-time stock visualization.</li>
+                <li><strong>Advanced UI:</strong> Dark Mode support, Sortable tables, and Advanced Filtering.</li>
+            </ul>
+
+            <div style="margin-top: 2rem; text-align: center;">
+                 <a href="https://panyarat123.github.io/Dev_Factory/" target="_blank" class="btn" style="background: linear-gradient(135deg, #28a745 0%, #218838 100%); border: none; color: white;">
+                   🚀 Try the Live Demo
+                </a>
+            </div>
+        </div>
+    </div>
     <div id="modal-superstore" class="modal">
         <div class="modal-content">
             <span class="close-modal" onclick="closeModal('modal-superstore')">&times;</span>
