@@ -1,17 +1,23 @@
 <!DOCTYPE html>
 <html lang="th">
 <head>
-    <script async src="https://www.googletagmanager.com/gtag/js?id=G-6G2TMB6NVB"></script>
-    <script>
-      window.dataLayer = window.dataLayer || [];
-      function gtag(){dataLayer.push(arguments);}
-      gtag('js', new Date());
-      gtag('config', 'G-6G2TMB6NVB');
-    </script>
+    <!-- Performance: Preconnect to external domains -->
+    <link rel="preconnect" href="https://www.googletagmanager.com">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="preconnect" href="https://cdnjs.cloudflare.com">
+    <link rel="dns-prefetch" href="https://formspree.io">
+    
+    <!-- Security Headers -->
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self' 'unsafe-inline' https://www.googletagmanager.com https://cdnjs.cloudflare.com; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com; font-src 'self' https://fonts.gstatic.com; img-src 'self' data: https:; connect-src 'self' https://www.google-analytics.com https://formspree.io; frame-src 'self' https://www.google.com;">
+    <meta http-equiv="X-Content-Type-Options" content="nosniff">
+    <meta http-equiv="X-Frame-Options" content="SAMEORIGIN">
+    <meta http-equiv="Referrer-Policy" content="strict-origin-when-cross-origin">
 
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Panyarat Netrune |  Portfolio</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+    <title>Panyarat Netrune | Portfolio</title>
     
     <meta name="description" content="Panyarat Netrune - CS Student seeking Business Analysis, System Analysis, Software Developer internship (May - Oct 2026, 6 Months) at Kasetsart University.">
     <meta name="keywords" content="Business Analysis, System Analysis, Software Developer, Internship, Computer Science, COSO Framework">
@@ -21,9 +27,96 @@
     <meta property="og:description" content="Portfolio of a CS Student seeking Internship in BA, SA, PM (2026).">
     <meta property="og:image" content="Me3.jpg">
     <meta property="og:type" content="website">
+    <meta property="og:url" content="https://panyarat123.github.io/Portfolio/">
+    <meta property="og:site_name" content="Panyarat Netrune Portfolio">
+    <meta property="og:locale" content="th_TH">
     
+    <!-- Twitter Card -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Panyarat Netrune | Portfolio">
+    <meta name="twitter:description" content="CS Student seeking Business Analysis, System Analysis, Software Developer internship (May - Oct 2026)">
+    <meta name="twitter:image" content="Me3.jpg">
+    
+    <meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1">
+    <meta name="googlebot" content="index, follow">
+    <link rel="canonical" href="https://panyarat123.github.io/Portfolio/">
+    
+    <!-- Favicon -->
     <link rel="icon" type="image/png" href="Me3.jpg">
-    <link href="https://fonts.googleapis.com/css2?family=Sarabun:wght@300;400;600;700&display=swap" rel="stylesheet">
+    <link rel="apple-touch-icon" href="Me3.jpg">
+    <link rel="icon" type="image/png" sizes="32x32" href="Me3.jpg">
+    <link rel="icon" type="image/png" sizes="16x16" href="Me3.jpg">
+    <meta name="theme-color" content="#667eea">
+    <meta name="msapplication-TileColor" content="#667eea">
+    
+    <!-- Fonts: Optimized loading with font-display -->
+    <link rel="preload" href="https://fonts.googleapis.com/css2?family=Sarabun:wght@300;400;600;700&display=swap" as="style" onload="this.onload=null;this.rel='stylesheet'">
+    <noscript><link href="https://fonts.googleapis.com/css2?family=Sarabun:wght@300;400;600;700&display=swap" rel="stylesheet"></noscript>
+    <style>
+        /* Font fallback while loading */
+        body { font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; }
+    </style>
+    
+    <!-- Google Analytics: Optimized -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-6G2TMB6NVB"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+      gtag('config', 'G-6G2TMB6NVB', {
+        'anonymize_ip': true,
+        'cookie_flags': 'SameSite=None;Secure'
+      });
+    </script>
+    
+    <!-- Structured Data (JSON-LD) for SEO -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "Person",
+      "name": "Panyarat Netrune",
+      "jobTitle": "Computer Science Student",
+      "alumniOf": {
+        "@type": "EducationalOrganization",
+        "name": "Kasetsart University Sriracha Campus"
+      },
+      "url": "https://panyarat123.github.io/Portfolio/",
+      "sameAs": [
+        "https://www.linkedin.com/in/panyarat-netruen-282760393/"
+      ],
+      "email": "panyarat.n@ku.th",
+      "telephone": "+66-93-149-2997",
+      "description": "3rd-year Computer Science student seeking Business Analysis, System Analysis, and Software Developer internship opportunities.",
+      "knowsAbout": [
+        "Business Analysis",
+        "System Analysis",
+        "Software Development",
+        "IT Risk Management",
+        "COSO Framework"
+      ],
+      "hasCredential": [
+        {
+          "@type": "EducationalOccupationalCredential",
+          "credentialCategory": "Certification",
+          "name": "LINK Certified Network Cabling for Engineering (LCCE)"
+        }
+      ]
+    }
+    </script>
+    
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "WebSite",
+      "name": "Panyarat Netrune Portfolio",
+      "url": "https://panyarat123.github.io/Portfolio/",
+      "author": {
+        "@type": "Person",
+        "name": "Panyarat Netrune"
+      },
+      "description": "Portfolio website showcasing projects in Business Analysis, System Analysis, and Software Development"
+    }
+    </script>
     
     <style>
         /* --- CSS VARIABLES & THEME CONFIG --- */
@@ -103,15 +196,21 @@
         }
 
         /* Override specific text colors in dark mode */
-        [data-theme="dark"] h2, 
-        [data-theme="dark"] h3, 
-        [data-theme="dark"] h4,
-        [data-theme="dark"] strong {
-            color: var(--text-heading) !important;
+        [data-theme="dark"] section h2, 
+        [data-theme="dark"] section h3, 
+        [data-theme="dark"] section h4,
+        [data-theme="dark"] section strong,
+        [data-theme="dark"] .modal-content h2,
+        [data-theme="dark"] .modal-content h3,
+        [data-theme="dark"] .modal-content h4,
+        [data-theme="dark"] .modal-content strong {
+            color: var(--text-heading);
         }
         
-        [data-theme="dark"] p,
-        [data-theme="dark"] li {
+        [data-theme="dark"] section p,
+        [data-theme="dark"] section li,
+        [data-theme="dark"] .modal-content p,
+        [data-theme="dark"] .modal-content li {
             color: var(--text-main);
         }
         
@@ -120,17 +219,22 @@
         [data-theme="dark"] .cert-card,
         [data-theme="dark"] .contact-card,
         [data-theme="dark"] .diagram-frame,
-        [data-theme="dark"] .modal-content,
-        [data-theme="dark"] input, 
-        [data-theme="dark"] textarea {
-            background: var(--bg-section) !important;
+        [data-theme="dark"] .modal-content {
+            background: var(--bg-section);
             border-color: var(--border-color);
             box-shadow: 0 4px 6px rgba(0,0,0,0.2);
             color: var(--text-main);
         }
 
         [data-theme="dark"] .skill-category {
-            background: var(--bg-card) !important;
+            background: var(--bg-card);
+        }
+
+        [data-theme="dark"] input.form-control, 
+        [data-theme="dark"] textarea.form-control {
+            background: var(--bg-section);
+            border-color: var(--border-color);
+            color: var(--text-main);
         }
 
         /* Page Loader */
@@ -311,8 +415,19 @@
         }
 
         /* Hero text always white regardless of theme */
-        .hero h1, .hero p, .hero span {
-            color: white !important;
+        .hero h1, 
+        .hero p, 
+        .hero span,
+        .hero .hero-badge {
+            color: white;
+        }
+
+        /* Ensure hero text stays white even in dark mode */
+        [data-theme="dark"] .hero h1,
+        [data-theme="dark"] .hero p,
+        [data-theme="dark"] .hero span,
+        [data-theme="dark"] .hero .hero-badge {
+            color: white;
         }
 
         .profile-img {
@@ -462,13 +577,15 @@
             box-shadow: 0 5px 15px rgba(102, 126, 234, 0.3);
         }
 
+        /* Stat cards should maintain gradient in dark mode */
         [data-theme="dark"] .stat-card {
-            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%) !important;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
             box-shadow: 0 5px 15px rgba(0,0,0,0.5);
         }
         [data-theme="dark"] .stat-card h3,
-        [data-theme="dark"] .stat-card p {
-            color: white !important;
+        [data-theme="dark"] .stat-card p,
+        [data-theme="dark"] .stat-card .stat-number {
+            color: white;
         }
         
         .stat-card:hover {
@@ -1086,7 +1203,13 @@
 
         footer p {
             margin-bottom: 1rem;
-            color: rgba(255,255,255,0.7) !important;
+            color: rgba(255,255,255,0.7);
+        }
+
+        /* Ensure footer text stays consistent */
+        [data-theme="dark"] footer p,
+        [data-theme="light"] footer p {
+            color: rgba(255,255,255,0.7);
         }
 
         footer a {
@@ -1168,6 +1291,336 @@
         .skip-link:focus {
             top: 0;
         }
+
+        /* Utility Classes for Inline Styles */
+        .hero-badge {
+            color: #00d4ff;
+            font-weight: bold;
+            margin-top: 0.5rem;
+            font-size: 1.1rem;
+            text-shadow: 0 2px 4px rgba(0,0,0,0.3);
+            background: rgba(0,0,0,0.2);
+            display: inline-block;
+            padding: 5px 15px;
+            border-radius: 20px;
+        }
+
+        .about-container {
+            display: flex;
+            gap: 2rem;
+            align-items: center;
+            flex-wrap: wrap;
+        }
+
+        .about-content {
+            flex: 2;
+        }
+
+        .about-text-large {
+            font-size: 1.2rem;
+            line-height: 1.9;
+            margin-bottom: 2rem;
+        }
+
+        .about-text-medium {
+            font-size: 1.1rem;
+            line-height: 1.8;
+            color: var(--text-muted);
+            margin-bottom: 2rem;
+        }
+
+        .internship-badge {
+            color: var(--primary);
+            font-weight: 600;
+            padding: 5px 10px;
+            background: rgba(102, 126, 234, 0.1);
+            border-radius: 8px;
+        }
+
+        .nav-controls-wrapper {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+
+        .contact-info-wrapper {
+            flex: 1;
+            display: flex;
+            flex-direction: column;
+            gap: 1.5rem;
+            max-width: 350px;
+        }
+
+        .contact-card-full {
+            width: 100%;
+        }
+
+        .contact-form-expanded {
+            flex: 2;
+        }
+
+        .academic-focus-box {
+            margin-top: 2rem;
+            padding: 1.5rem;
+            background: var(--bg-body);
+            border-radius: 10px;
+            border-left: 4px solid #667eea;
+        }
+
+        .academic-focus-title {
+            font-weight: 600;
+            color: #667eea;
+            margin-bottom: 0.5rem;
+        }
+
+        .academic-focus-text {
+            color: var(--text-muted);
+            line-height: 1.8;
+        }
+
+        .scope-badge {
+            margin: 1.5rem 0;
+            padding: 1rem;
+            background: rgba(102, 126, 234, 0.1);
+            border-radius: 8px;
+        }
+
+        .scope-text {
+            color: #667eea;
+            font-weight: 600;
+        }
+
+        .timeline-date-style {
+            margin-top: 0;
+        }
+
+        .timeline-subtitle {
+            color: var(--text-muted);
+            font-size: 1.1rem;
+        }
+
+        .coursework-title {
+            margin-top: 1.5rem;
+            font-weight: 600;
+            color: #667eea;
+        }
+
+        .coursework-list {
+            margin: 1rem 0 0 2rem;
+            line-height: 2;
+        }
+
+        .timeline-list {
+            margin: 1rem 0 0 2rem;
+            line-height: 2;
+        }
+
+        .project-title {
+            margin: 0;
+            color: var(--text-heading);
+        }
+
+        .project-meta {
+            color: var(--text-muted);
+            margin-top: 0.5rem;
+            font-size: 1.05rem;
+        }
+
+        .project-description {
+            margin: 1.5rem 0;
+            font-size: 1.1rem;
+            line-height: 1.8;
+            color: var(--text-main);
+        }
+
+        .modal-title {
+            color: var(--primary);
+        }
+
+        .modal-role {
+            margin-bottom: 1rem;
+        }
+
+        .modal-text {
+            line-height: 1.8;
+        }
+
+        .modal-list {
+            margin-left: 1.5rem;
+            margin-bottom: 1.5rem;
+            line-height: 1.6;
+        }
+
+        .modal-list-compact {
+            margin-left: 1.5rem;
+            margin-bottom: 1.5rem;
+        }
+
+        .modal-center {
+            margin-top: 2rem;
+            text-align: center;
+        }
+
+        .btn-success {
+            background: linear-gradient(135deg, #28a745 0%, #218838 100%);
+            border: none;
+            color: white;
+        }
+
+        .btn-dark {
+            background: #24292e;
+            color: white;
+        }
+
+        .btn-primary-inline {
+            border: none;
+            cursor: pointer;
+            background: #667eea;
+            color: white;
+        }
+
+        .cert-link-wrapper {
+            text-align: center;
+            margin-top: 2rem;
+        }
+
+        .cert-link {
+            display: inline-flex;
+            align-items: center;
+            gap: 0.5rem;
+        }
+
+        .gallery-description {
+            margin-bottom: 2rem;
+            color: var(--text-muted);
+        }
+
+        .contact-intro {
+            text-align: center;
+            margin-bottom: 3rem;
+            font-size: 1.1rem;
+        }
+
+        .form-title {
+            margin-bottom: 1.5rem;
+            color: var(--text-heading);
+        }
+
+        .diagram-no-border {
+            border: none;
+            box-shadow: none;
+        }
+
+        .diagram-inline {
+            flex: 0 0 auto;
+            width: auto;
+        }
+
+        .diagram-inline img {
+            height: 200px;
+            border-radius: 8px;
+        }
+
+        /* Form Validation Styles */
+        .error-message {
+            display: none;
+            color: #dc3545;
+            font-size: 0.875rem;
+            margin-top: 0.25rem;
+        }
+
+        .form-control:invalid:not(:focus):not(:placeholder-shown) {
+            border-color: #dc3545;
+        }
+
+        .form-control:valid:not(:focus):not(:placeholder-shown) {
+            border-color: #28a745;
+        }
+
+        .form-control:invalid:not(:focus):not(:placeholder-shown) + .error-message {
+            display: block;
+        }
+
+        .btn-submit:disabled {
+            opacity: 0.6;
+            cursor: not-allowed;
+        }
+
+        /* Loading States */
+        .loading-overlay {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(0, 0, 0, 0.5);
+            display: none;
+            align-items: center;
+            justify-content: center;
+            z-index: 10000;
+            backdrop-filter: blur(4px);
+        }
+
+        .loading-overlay.active {
+            display: flex;
+        }
+
+        .loading-spinner {
+            width: 50px;
+            height: 50px;
+            border: 4px solid rgba(255, 255, 255, 0.3);
+            border-top-color: white;
+            border-radius: 50%;
+            animation: spin 1s linear infinite;
+        }
+
+        /* Image Loading Placeholder */
+        .image-placeholder {
+            background: linear-gradient(90deg, #f0f0f0 25%, #e0e0e0 50%, #f0f0f0 75%);
+            background-size: 200% 100%;
+            animation: loading 1.5s ease-in-out infinite;
+        }
+
+        @keyframes loading {
+            0% { background-position: 200% 0; }
+            100% { background-position: -200% 0; }
+        }
+
+        /* Reduced Motion Support */
+        @media (prefers-reduced-motion: reduce) {
+            *,
+            *::before,
+            *::after {
+                animation-duration: 0.01ms !important;
+                animation-iteration-count: 1 !important;
+                transition-duration: 0.01ms !important;
+                scroll-behavior: auto !important;
+            }
+        }
+
+        /* Print Styles */
+        @media print {
+            .page-loader,
+            .progress-bar,
+            .back-to-top,
+            .floating-resume,
+            .theme-toggle-btn,
+            .menu-toggle,
+            nav {
+                display: none !important;
+            }
+            
+            body {
+                background: white;
+                color: black;
+            }
+            
+            section {
+                page-break-inside: avoid;
+                box-shadow: none;
+                border: 1px solid #ddd;
+            }
+        }
     </style>
 </head>
 <body>
@@ -1175,10 +1628,16 @@
         <div class="spinner"></div>
     </div>
 
+    <!-- Skip Links for Accessibility -->
     <a href="#main-content" class="skip-link">Skip to main content</a>
+    <a href="#about" class="skip-link">Skip to about section</a>
+    <a href="#contact" class="skip-link">Skip to contact form</a>
 
-    <div class="progress-bar" id="progressBar"></div>
-    <div class="toast" id="toast" role="alert" aria-live="polite"></div>
+    <div class="progress-bar" id="progressBar" role="progressbar" aria-label="Page scroll progress" aria-valuemin="0" aria-valuemax="100" aria-valuenow="0"></div>
+    <div class="toast" id="toast" role="alert" aria-live="polite" aria-atomic="true"></div>
+    <div class="loading-overlay" id="loadingOverlay" aria-hidden="true">
+        <div class="loading-spinner" aria-label="Loading"></div>
+    </div>
 
     <div id="lightbox" class="lightbox" role="dialog" aria-label="Image lightbox" aria-modal="true">
         <span class="close-lightbox" role="button" tabindex="0" aria-label="Close lightbox">&times;</span>
@@ -1189,7 +1648,7 @@
         <div class="container">
             <h1>Panyarat Netrune</h1>
             
-            <div class="nav-controls" style="display: flex; align-items: center; gap: 10px;">
+            <div class="nav-controls nav-controls-wrapper">
                 <button class="menu-toggle" id="menuToggle" aria-label="Toggle menu" aria-expanded="false">
                     <span></span>
                     <span></span>
@@ -1214,16 +1673,24 @@
         </div>
     </nav>
 
-    <header class="hero" id="main-content">
-        <div id="particles-js"></div>
+    <header class="hero" id="main-content" role="banner">
+        <div id="particles-js" aria-hidden="true"></div>
         <div class="hero-content">
-            <img src="Me3.jpg" alt="Profile photo of Panyarat Netrune" class="profile-img" width="180" height="180" loading="eager">
+            <img src="Me3.jpg" 
+                 alt="Profile photo of Panyarat Netrune" 
+                 class="profile-img" 
+                 width="180" 
+                 height="180" 
+                 loading="eager" 
+                 fetchpriority="high"
+                 decoding="async"
+                 srcset="Me3.jpg 1x, Me3.jpg 2x">
             
             <h1>Panyarat Netrune</h1>
             <p>🎯 <span class="typing-text" id="typingText"></span></p>
             <p>3rd-year Computer Science Student @ Kasetsart University Sriracha</p>
             
-            <p style="color: #00d4ff; font-weight: bold; margin-top: 0.5rem; font-size: 1.1rem; text-shadow: 0 2px 4px rgba(0,0,0,0.3); background: rgba(0,0,0,0.2); display: inline-block; padding: 5px 15px; border-radius: 20px;">
+            <p class="hero-badge">
                 ✨ Open for Internship: May - October 2026 (6 Months)
             </p>
             
@@ -1235,22 +1702,23 @@
         </div>
     </header>
 
-    <section id="about">
-        <h2>👋 About Me</h2>
-        <div style="display: flex; gap: 2rem; align-items: center; flex-wrap: wrap;">
-            <div style="flex: 2;">
-                <p style="font-size: 1.2rem; line-height: 1.9; margin-bottom: 2rem;">
+    <main role="main">
+    <section id="about" aria-labelledby="about-heading">
+        <h2 id="about-heading">👋 About Me</h2>
+        <div class="about-container">
+            <div class="about-content">
+                <p class="about-text-large">
                     I'm a <strong>3rd-year Computer Science student</strong> with proven leadership experience managing 
                     <strong>300+ stakeholders</strong> over 3 years. My passion lies in <strong>Business Analysis, System Analysis, 
                     and Software Developer</strong>, where I combine analytical thinking with practical problem-solving skills.
                 </p>
                 
-                <p style="font-size: 1.1rem; line-height: 1.8; color: var(--text-muted); margin-bottom: 2rem;">
+                <p class="about-text-medium">
                     Through my role as <strong>Head of Computer Science Department</strong> and <strong>University MC</strong>, 
                     I've developed strong skills in stakeholder management, risk assessment, process optimization, and 
                     cross-functional team coordination. 
                     <br><br>
-                    <span style="color: var(--primary); font-weight: 600; padding: 5px 10px; background: rgba(102, 126, 234, 0.1); border-radius: 8px;">
+                    <span class="internship-badge">
                         📍 I am currently seeking a 6-month internship opportunity from May to October 2026
                     </span>
                     <br><br>
@@ -1279,17 +1747,17 @@
         </div>
     </section>
 
-    <section id="education">
-        <h2>🎓 Education</h2>
+    <section id="education" aria-labelledby="education-heading">
+        <h2 id="education-heading">🎓 Education</h2>
         
         <div class="timeline">
             <div class="timeline-item">
                 <div class="timeline-date">2022 - Present (Expected 2026)</div>
-                <h3 style="margin-top: 0;">Bachelor of Science in Computer Science</h3>
-                <p style="color: var(--text-muted); font-size: 1.1rem;">Kasetsart University Sriracha Campus</p>
+                <h3 class="timeline-date-style">Bachelor of Science in Computer Science</h3>
+                <p class="timeline-subtitle">Kasetsart University Sriracha Campus</p>
                 
-                <p style="margin-top: 1.5rem; font-weight: 600; color: #667eea;">📚 Relevant Coursework:</p>
-                <ul style="margin: 1rem 0 0 2rem; line-height: 2;">
+                <p class="coursework-title">📚 Relevant Coursework:</p>
+                <ul class="coursework-list">
                     <li><strong>System Analysis and Design</strong> - DFD, ERD, Use Cases, Agile</li>
                     <li><strong>Database Management Systems</strong> - SQL, Database Design, Normalization</li>
                     <li><strong>Software Engineering</strong> - SDLC, Testing, Documentation</li>
@@ -1297,9 +1765,9 @@
                     <li><strong>Information Security</strong> - Network Security, Risk Management</li>
                 </ul>
 
-                <div style="margin-top: 2rem; padding: 1.5rem; background: var(--bg-body); border-radius: 10px; border-left: 4px solid #667eea;">
-                    <p style="font-weight: 600; color: #667eea; margin-bottom: 0.5rem;">🎯 Academic Focus:</p>
-                    <p style="color: var(--text-muted); line-height: 1.8;">
+                <div class="academic-focus-box">
+                    <p class="academic-focus-title">🎯 Academic Focus:</p>
+                    <p class="academic-focus-text">
                         Specializing in <strong>System Analysis</strong>, <strong>IT Risk Management</strong>, 
                         and <strong>Business Process Optimization</strong>. Developed comprehensive understanding 
                         of COSO Framework, Internal Controls, and Risk Assessment methodologies.
@@ -1309,14 +1777,14 @@
         </div>
     </section>
 
-    <section id="projects">
-        <h2>🚀 Featured Projects</h2>
+    <section id="projects" aria-labelledby="projects-heading">
+        <h2 id="projects-heading">🚀 Featured Projects</h2>
         
         <div class="project-card">
             <div class="project-header">
                 <div>
-                    <h3 style="margin: 0; color: var(--text-heading);">Event Registration Process Improvement</h3>
-                    <p style="color: var(--text-muted); margin-top: 0.5rem; font-size: 1.05rem;">
+                    <h3 class="project-title">Event Registration Process Improvement</h3>
+                    <p class="project-meta">
                         📈 Business Analysis & Web Portfolio | 📅 Dec 2025
                     </p>
                 </div>
@@ -1328,16 +1796,16 @@
                 </div>
             </div>
             
-            <p style="margin: 1.5rem 0; font-size: 1.1rem; line-height: 1.8; color: var(--text-main);">
+            <p class="project-description">
                 A comprehensive Business Analysis case study showcased as an interactive website. 
                 Analyzed and redesigned the university event registration process to reduce wait time by 60%.
             </p>
             
             <div class="project-links">
-                <button onclick="openModal('modal-ba-portfolio')" class="project-link" style="border:none; cursor:pointer; background:#667eea; color:white;">
+                <button onclick="openModal('modal-ba-portfolio')" class="project-link btn-primary-inline">
                     🔍 View Analysis / ดูบทวิเคราะห์
                 </button>
-                <a href="https://panyarat123.github.io/Business_Analysis/" target="_blank" class="project-link" style="background: #28a745; color: white;">
+                <a href="https://panyarat123.github.io/Business_Analysis/" target="_blank" class="project-link btn-success">
                     🌐 Live Demo
                 </a>
             </div>
@@ -1346,8 +1814,8 @@
         <div class="project-card">
             <div class="project-header">
                 <div>
-                    <h3 style="margin: 0; color: var(--text-heading);">Bit Express Smart Delivery System</h3>
-                    <p style="color: var(--text-muted); margin-top: 0.5rem; font-size: 1.05rem;">
+                    <h3 class="project-title">Bit Express Smart Delivery System</h3>
+                    <p class="project-meta">
                         🚚 End-to-End Logistics Platform | 📅 Jan - Apr 2024
                     </p>
                 </div>
@@ -1358,13 +1826,13 @@
                 </div>
             </div>
             
-            <p style="margin: 1.5rem 0; font-size: 1.1rem; line-height: 1.8; color: var(--text-main);">
+            <p class="project-description">
                 Designed comprehensive logistics platform connecting Senders, Riders, and Receivers.
                 Included Risk Control Matrix (RCM) using COSO Framework.
             </p>
             
             <div class="project-links">
-                <button onclick="openModal('modal-bit-express')" class="project-link" style="border:none; cursor:pointer; background:#667eea; color:white;">
+                <button onclick="openModal('modal-bit-express')" class="project-link btn-primary-inline">
                     🔍 View Details / ดูรายละเอียด
                 </button>
                 <a href="https://drive.google.com/drive/folders/1bCpRlWtbjHQNvn6YPVbx-_qj4qjMv-On?usp=sharing" target="_blank" class="project-link">📁 Case Study</a>
@@ -1374,8 +1842,8 @@
         <div class="project-card">
             <div class="project-header">
                 <div>
-                    <h3 style="margin: 0; color: var(--text-heading);">FactoryOne Inventory System</h3>
-                    <p style="color: var(--text-muted); margin-top: 0.5rem; font-size: 1.05rem;">
+                    <h3 class="project-title">FactoryOne Inventory System</h3>
+                    <p class="project-meta">
                         🏭 Web Application Development | 📅 Dec 2025
                     </p>
                 </div>
@@ -1387,18 +1855,18 @@
                 </div>
             </div>
 
-            <p style="margin: 1.5rem 0; font-size: 1.1rem; line-height: 1.8; color: var(--text-main);">
+            <p class="project-description">
                 A robust Single Page Application (SPA) for inventory tracking. Built entirely with Vanilla JavaScript to demonstrate core DOM manipulation and state management without heavy frameworks. Features real-time dashboard analytics, full CRUD operations, and dark mode.
             </p>
 
             <div class="project-links">
-                <button onclick="openModal('modal-factory')" class="project-link" style="border:none; cursor:pointer; background:#667eea; color:white;">
+                <button onclick="openModal('modal-factory')" class="project-link btn-primary-inline">
                     🔍 View Details / ดูรายละเอียด
                 </button>
-                <a href="https://panyarat123.github.io/Dev_Factory/" target="_blank" class="project-link" style="background: #28a745; color: white;">
+                <a href="https://panyarat123.github.io/Dev_Factory/" target="_blank" class="project-link btn-success">
                     🌐 Live Demo
                 </a>
-                <a href="https://github.com/panyarat123/Dev_Factory" target="_blank" class="project-link" style="background: #24292e; color: white;">
+                <a href="https://github.com/panyarat123/Dev_Factory" target="_blank" class="project-link btn-dark">
                      💻 GitHub
                 </a>
             </div>
@@ -1406,8 +1874,8 @@
         <div class="project-card">
             <div class="project-header">
                 <div>
-                    <h3 style="margin: 0; color: var(--text-heading);">Superstore Sales & Profit Analysis</h3>
-                    <p style="color: var(--text-muted); margin-top: 0.5rem; font-size: 1.05rem;">
+                    <h3 class="project-title">Superstore Sales & Profit Analysis</h3>
+                    <p class="project-meta">
                         📊 Data Analytics | 📅 Oct 2025
                     </p>
                 </div>
@@ -1418,15 +1886,15 @@
                 </div>
             </div>
             
-            <p style="margin: 1.5rem 0; font-size: 1.1rem; line-height: 1.8; color: var(--text-main);">
+            <p class="project-description">
                 Solved "Why are profits low despite high sales?" using SQL and Power BI dashboarding.
             </p>
             
             <div class="project-links">
-                 <button onclick="openModal('modal-superstore')" class="project-link" style="border:none; cursor:pointer; background:#667eea; color:white;">
+                 <button onclick="openModal('modal-superstore')" class="project-link btn-primary-inline">
                     🔍 View Details / ดูรายละเอียด
                 </button>
-                <a href="https://github.com/Panyarat123/Superstore-Sales-Analysis" target="_blank" class="project-link" style="background: #24292e; color: white;">
+                <a href="https://github.com/Panyarat123/Superstore-Sales-Analysis" target="_blank" class="project-link btn-dark">
                     💻 GitHub Repo
                 </a>
             </div>
@@ -1435,8 +1903,8 @@
         <div class="project-card">
             <div class="project-header">
                 <div>
-                    <h3 style="margin: 0; color: var(--text-heading);">File Integrity Checker (IT Audit Tool)</h3>
-                    <p style="color: var(--text-muted); margin-top: 0.5rem; font-size: 1.05rem;">
+                    <h3 class="project-title">File Integrity Checker (IT Audit Tool)</h3>
+                    <p class="project-meta">
                         🛡️ Security Tool | 📅 Dec 2025
                     </p>
                 </div>
@@ -1447,15 +1915,15 @@
                 </div>
             </div>
             
-            <p style="margin: 1.5rem 0; font-size: 1.1rem; line-height: 1.8; color: var(--text-main);">
+            <p class="project-description">
                 Automated tool to detect unauthorized file modifications using SHA-256 Hashing.
             </p>
             
             <div class="project-links">
-                <button onclick="openModal('modal-integrity')" class="project-link" style="border:none; cursor:pointer; background:#667eea; color:white;">
+                <button onclick="openModal('modal-integrity')" class="project-link btn-primary-inline">
                     🔍 View Details / ดูรายละเอียด
                 </button>
-                <a href="https://github.com/Panyarat123/File-Integrity-Checker" target="_blank" class="project-link" style="background: #24292e; color: white;">
+                <a href="https://github.com/Panyarat123/File-Integrity-Checker" target="_blank" class="project-link btn-dark">
                     💻 GitHub Repo
                 </a>
             </div>
@@ -1466,24 +1934,24 @@
     <div id="modal-ba-portfolio" class="modal">
         <div class="modal-content">
             <span class="close-modal" onclick="closeModal('modal-ba-portfolio')">&times;</span>
-            <h2 style="color: var(--primary);">Event Registration Process Improvement</h2>
-            <p style="margin-bottom: 1rem;"><strong>Role:</strong> Business Analyst & Frontend Developer</p>
-            <p style="line-height: 1.8;">
+            <h2 class="modal-title">Event Registration Process Improvement</h2>
+            <p class="modal-role"><strong>Role:</strong> Business Analyst & Frontend Developer</p>
+            <p class="modal-text">
                 Developed an interactive web-based portfolio to present a Business Analysis case study. 
                 The project addresses the inefficiencies in the manual event registration process at the university.
                 By implementing an automated system, we projected a reduction in processing time from <strong>5 days to 2 days</strong>.
             </p>
             
-            <h4 style="margin-top: 1.5rem; color: var(--primary);">Key Deliverables:</h4>
-            <ul style="margin-left: 1.5rem; margin-bottom: 1.5rem; line-height: 1.6;">
+            <h4 class="modal-title" style="margin-top: 1.5rem;">Key Deliverables:</h4>
+            <ul class="modal-list">
                 <li><strong>Problem Analysis:</strong> Identified pain points using 5 Whys and Fishbone Diagram.</li>
                 <li><strong>Process Mapping:</strong> Created As-Is and To-Be BPMN diagrams.</li>
                 <li><strong>Interactive Presentation:</strong> Built a React.js website to replace traditional PDF reports.</li>
                 <li><strong>Impact Assessment:</strong> Calculated ROI and projected a 40% increase in staff productivity.</li>
             </ul>
             
-            <div style="margin-top: 2rem; text-align: center;">
-                 <a href="https://panyarat123.github.io/Business_Analysis/" target="_blank" class="btn" style="background: linear-gradient(135deg, #28a745 0%, #218838 100%); border: none; color: white;">
+            <div class="modal-center">
+                 <a href="https://panyarat123.github.io/Business_Analysis/" target="_blank" class="btn btn-success">
     🚀 Visit Interactive Website
 </a>
             </div>
@@ -1493,15 +1961,15 @@
     <div id="modal-bit-express" class="modal">
         <div class="modal-content">
             <span class="close-modal" onclick="closeModal('modal-bit-express')">&times;</span>
-            <h2 style="color: var(--primary);">Bit Express Smart Delivery System</h2>
-            <p style="margin-bottom: 1rem;"><strong>Role:</strong> System Analyst & Project Coordinator Lead</p>
-            <p style="line-height: 1.8;">
+            <h2 class="modal-title">Bit Express Smart Delivery System</h2>
+            <p class="modal-role"><strong>Role:</strong> System Analyst & Project Coordinator Lead</p>
+            <p class="modal-text">
                 Designed comprehensive logistics platform connecting Senders, Riders, and Receivers with real-time tracking, 
                 automated notifications, and digital proof of delivery (e-POD). 
                 The system addresses critical pain points in traditional parcel delivery.
             </p>
-            <h4 style="margin-top: 1.5rem; color: var(--primary);">Key Highlights:</h4>
-            <ul style="margin-left: 1.5rem; margin-bottom: 1.5rem;">
+            <h4 class="modal-title" style="margin-top: 1.5rem;">Key Highlights:</h4>
+            <ul class="modal-list-compact">
                 <li><strong>Risk Analysis:</strong> Created Risk Control Matrix (RCM) covering Authentication & Fraud.</li>
                 <li><strong>System Design:</strong> Developed DFD Level 0-1 and Class Diagrams.</li>
                 <li><strong>Outcome:</strong> 100% control coverage for critical risks.</li>
@@ -1513,7 +1981,7 @@
                 <div class="diagram-frame"><img src="Figma_Home1.png" alt="UI Design"></div>
             </div>
             
-            <div style="margin-top: 2rem; text-align: center;">
+            <div class="modal-center">
                  <a href="https://drive.google.com/drive/folders/1MY-z20XmJgEMxr7J-FKoVa6yJ_CF2tGz?usp=sharing" target="_blank" class="btn">📄 View Full Documentation</a>
             </div>
         </div>
@@ -1522,22 +1990,22 @@
     <div id="modal-factory" class="modal">
         <div class="modal-content">
             <span class="close-modal" onclick="closeModal('modal-factory')">&times;</span>
-            <h2 style="color: var(--primary);">FactoryOne Inventory Management System</h2>
-            <p style="margin-bottom: 1rem;"><strong>Role:</strong> Full Stack Developer (Frontend Focus)</p>
-            <p style="line-height: 1.8;">
+            <h2 class="modal-title">FactoryOne Inventory Management System</h2>
+            <p class="modal-role"><strong>Role:</strong> Full Stack Developer (Frontend Focus)</p>
+            <p class="modal-text">
                 Developed a lightweight, responsive inventory system. The goal was to build a functional <strong>CRUD (Create, Read, Update, Delete)</strong> application with complex state management using only core web technologies (No React/Vue). This demonstrates a deep understanding of how web systems work under the hood.
             </p>
 
-            <h4 style="margin-top: 1.5rem; color: var(--primary);">System Features:</h4>
-            <ul style="margin-left: 1.5rem; margin-bottom: 1.5rem; line-height: 1.6;">
+            <h4 class="modal-title" style="margin-top: 1.5rem;">System Features:</h4>
+            <ul class="modal-list">
                 <li><strong>Architecture:</strong> Single Page Application (SPA) with custom routing logic (Dashboard, Inventory, Production, Scanner).</li>
                 <li><strong>Data Management:</strong> Implemented LocalStorage for data persistence (Client-side database simulation).</li>
                 <li><strong>Analytics:</strong> Integrated Chart.js for real-time stock visualization.</li>
                 <li><strong>Advanced UI:</strong> Dark Mode support, Sortable tables, and Advanced Filtering.</li>
             </ul>
 
-            <div style="margin-top: 2rem; text-align: center;">
-                 <a href="https://panyarat123.github.io/Dev_Factory/" target="_blank" class="btn" style="background: linear-gradient(135deg, #28a745 0%, #218838 100%); border: none; color: white;">
+            <div class="modal-center">
+                 <a href="https://panyarat123.github.io/Dev_Factory/" target="_blank" class="btn btn-success">
                    🚀 Try the Live Demo
                 </a>
             </div>
@@ -1546,14 +2014,14 @@
     <div id="modal-superstore" class="modal">
         <div class="modal-content">
             <span class="close-modal" onclick="closeModal('modal-superstore')">&times;</span>
-            <h2 style="color: var(--primary);">Superstore Sales Analysis</h2>
+            <h2 class="modal-title">Superstore Sales Analysis</h2>
             <p><strong>Tools:</strong> SQL, Power BI</p>
-            <p style="margin-top: 1rem;">
+            <p class="modal-text" style="margin-top: 1rem;">
                 Investigated a retail giant's data to solve "Why are profits low despite high revenue?". 
                 Found that the "Furniture" category (specifically Tables) was causing significant losses due to excessive discounts.
             </p>
-            <div style="margin-top: 1.5rem; text-align: center;">
-                <div class="diagram-frame" style="border:none; box-shadow:none;">
+            <div class="modal-center" style="margin-top: 1.5rem;">
+                <div class="diagram-frame diagram-no-border">
                     <img src="dashboard.png" style="max-width: 100%; border-radius: 8px; box-shadow: 0 4px 10px rgba(0,0,0,0.1);">
                 </div>
                 <p class="diagram-caption">Power BI Dashboard</p>
@@ -1564,33 +2032,33 @@
     <div id="modal-integrity" class="modal">
         <div class="modal-content">
             <span class="close-modal" onclick="closeModal('modal-integrity')">&times;</span>
-            <h2 style="color: var(--primary);">File Integrity Checker</h2>
+            <h2 class="modal-title">File Integrity Checker</h2>
             <p><strong>Language:</strong> Python (SHA-256)</p>
-            <p style="margin-top: 1rem;">
+            <p class="modal-text" style="margin-top: 1rem;">
                 A tool implementing the "Integrity" aspect of the CIA Triad. It creates a digital fingerprint (baseline) of files 
                 and constantly monitors them. If a hacker modifies a file, the tool alerts immediately.
             </p>
             <div style="display: flex; gap: 1rem; margin-top: 1.5rem; overflow-x: auto;">
-                <div class="diagram-frame" style="flex: 0 0 auto; width: auto;"><img src="audit_result.png" style="height: 200px; border-radius: 8px;"></div>
-                <div class="diagram-frame" style="flex: 0 0 auto; width: auto;"><img src="audit_code.png" style="height: 200px; border-radius: 8px;"></div>
+                <div class="diagram-frame diagram-inline"><img src="audit_result.png" class="diagram-inline"></div>
+                <div class="diagram-frame diagram-inline"><img src="audit_code.png" class="diagram-inline"></div>
             </div>
         </div>
     </div>
 
-    <section id="experience">
-        <h2>💼 Leadership & Experience</h2>
+    <section id="experience" aria-labelledby="experience-heading">
+        <h2 id="experience-heading">💼 Leadership & Experience</h2>
         
         <div class="timeline">
             <div class="timeline-item">
                 <div class="timeline-date">2022 - Present (3 Years)</div>
-                <h3 style="margin-top: 0;">Head of Computer Science Department</h3>
-                <p style="color: var(--text-muted); font-size: 1.1rem;">Kasetsart University Sriracha Campus</p>
+                <h3 class="timeline-date-style">Head of Computer Science Department</h3>
+                <p class="timeline-subtitle">Kasetsart University Sriracha Campus</p>
                 
-                <div style="margin: 1.5rem 0; padding: 1rem; background: rgba(102, 126, 234, 0.1); border-radius: 8px;">
-                    <p style="color: #667eea; font-weight: 600;">🎯 Scope: Managing 300+ students & 20+ Events</p>
+                <div class="scope-badge">
+                    <p class="scope-text">🎯 Scope: Managing 300+ students & 20+ Events</p>
                 </div>
 
-                <ul style="margin: 1rem 0 0 2rem; line-height: 2;">
+                <ul class="timeline-list">
                     <li>Led departmental operations for <strong>300+ students</strong> across regular and special programs.</li>
                     <li>Coordinated <strong>20+ major events</strong> (orientation, sports, exhibitions) with zero incidents.</li>
                     <li>Served as primary liaison between students, faculty (20+ professors), and external vendors.</li>
@@ -1600,10 +2068,10 @@
             
             <div class="timeline-item">
                 <div class="timeline-date">2022 - Present</div>
-                <h3 style="margin-top: 0;">Master of Ceremonies (MC) & Event Organizer</h3>
-                <p style="color: var(--text-muted); font-size: 1.1rem;">University & Faculty Events</p>
+                <h3 class="timeline-date-style">Master of Ceremonies (MC) & Event Organizer</h3>
+                <p class="timeline-subtitle">University & Faculty Events</p>
                 
-                <ul style="margin: 1rem 0 0 2rem; line-height: 2;">
+                <ul class="timeline-list">
                     <li>Hosted <strong>20+ major events</strong> as MC for audiences up to <strong>3,000+ participants</strong>.</li>
                     <li>Organized <strong>university-wide E-sport ROV tournament</strong> (100+ participants).</li>
                     <li>Created promotional content reaching <strong>10,000+ views</strong> on TikTok/Social Media.</li>
@@ -1612,8 +2080,8 @@
         </div>
     </section>
 
-    <section id="skills">
-        <h2>🛠️ Technical Skills & Tools</h2>
+    <section id="skills" aria-labelledby="skills-heading">
+        <h2 id="skills-heading">🛠️ Technical Skills & Tools</h2>
         
         <div class="skills-grid">
             <div class="skill-category">
@@ -1658,8 +2126,8 @@
         </div>
     </section>
 
-    <section id="achievements">
-        <h2>🏆 Achievements & Certifications</h2>
+    <section id="achievements" aria-labelledby="achievements-heading">
+        <h2 id="achievements-heading">🏆 Achievements & Certifications</h2>
         
         <div class="skills-grid">
             <div class="skill-category" style="border-left-color: #ffc107;">
@@ -1715,16 +2183,16 @@
             </div>
         </div>
 
-        <div style="text-align: center; margin-top: 2rem;">
-            <a href="https://drive.google.com/drive/folders/1_y6ZPX54N3rgm8TI100gkDx73Tr5rKTM?usp=sharing" target="_blank" rel="noopener noreferrer" class="btn" style="display: inline-flex; align-items: center; gap: 0.5rem;">
+        <div class="cert-link-wrapper">
+            <a href="https://drive.google.com/drive/folders/1_y6ZPX54N3rgm8TI100gkDx73Tr5rKTM?usp=sharing" target="_blank" rel="noopener noreferrer" class="btn cert-link">
                 📂 View Certificate Evidence (Google Drive)
             </a>
         </div>
     </section>
 
-    <section id="gallery">
-        <h2>📸 Leadership & Activities</h2>
-        <p style="margin-bottom: 2rem; color: var(--text-muted);">
+    <section id="gallery" aria-labelledby="gallery-heading">
+        <h2 id="gallery-heading">📸 Leadership & Activities</h2>
+        <p class="gallery-description">
             Highlights of my journey as a Faculty Representative and Activity Leader. (Click to view full size)
         </p>
         
@@ -1755,22 +2223,22 @@
         </div>
     </section>
 
-    <section id="contact">
-        <h2>📞 Get in Touch</h2>
-        <p style="text-align: center; margin-bottom: 3rem; font-size: 1.1rem;">
+    <section id="contact" aria-labelledby="contact-heading">
+        <h2 id="contact-heading">📞 Get in Touch</h2>
+        <p class="contact-intro">
             Ready to contribute my skills in Business Analysis, System Analysis, or Software Developer.
         </p>
 
         <div class="contact-container">
-            <div style="flex: 1; display:flex; flex-direction:column; gap:1.5rem; max-width: 350px;">
-                <a href="tel:+66931492997" class="contact-card" aria-label="Call Panyarat" style="width:100%;">
+            <div class="contact-info-wrapper">
+                <a href="tel:+66931492997" class="contact-card contact-card-full" aria-label="Call Panyarat">
                     <div class="contact-icon">📱</div>
                     <h4>Phone</h4>
                     <p>093-149-2997</p>
                     <p class="link-text">Call Now →</p>
                 </a>
                 
-                <a href="https://www.linkedin.com/in/panyarat-netruen-282760393/" target="_blank" rel="noopener noreferrer" class="contact-card" aria-label="View LinkedIn profile" style="width:100%;">
+                <a href="https://www.linkedin.com/in/panyarat-netruen-282760393/" target="_blank" rel="noopener noreferrer" class="contact-card contact-card-full" aria-label="View LinkedIn profile">
                     <div class="contact-icon">💼</div>
                     <h4>LinkedIn</h4>
                     <p>Connect professionally</p>
@@ -1778,21 +2246,24 @@
                 </a>
              </div>
 
-            <div class="contact-form-wrapper" style="flex: 2;">
-                <h3 style="margin-bottom: 1.5rem; color: var(--text-heading);">✉️ Send me a Message</h3>
+            <div class="contact-form-wrapper contact-form-expanded">
+                <h3 class="form-title">✉️ Send me a Message</h3>
                 
-                <form action="https://formspree.io/f/xanrkdod" method="POST">
+                <form action="https://formspree.io/f/xanrkdod" method="POST" id="contactForm" novalidate>
                     <div class="form-group">
-                        <input type="email" name="email" class="form-control" placeholder="Your Email Address" required>
+                        <input type="email" name="email" id="contactEmail" class="form-control" placeholder="Your Email Address" required aria-required="true" aria-invalid="false">
+                        <span class="error-message" id="emailError" role="alert" aria-live="polite"></span>
                     </div>
                     <div class="form-group">
-                        <textarea name="message" class="form-control" placeholder="Write your message here..." rows="5" required></textarea>
+                        <textarea name="message" id="contactMessage" class="form-control" placeholder="Write your message here..." rows="5" required aria-required="true" aria-invalid="false" minlength="10"></textarea>
+                        <span class="error-message" id="messageError" role="alert" aria-live="polite"></span>
                     </div>
-                    <button type="submit" class="btn-submit">🚀 Send Message</button>
+                    <button type="submit" class="btn-submit" id="submitBtn">🚀 Send Message</button>
                 </form>
             </div>
         </div>
     </section>
+    </main>
 
     <a href="https://drive.google.com/drive/folders/1hdIVUE8Q03VH0y9Dm-s6D6UYCFxW8dWE?usp=sharing" target="_blank" class="floating-resume" aria-label="Download Resume">
         📄
@@ -1800,197 +2271,41 @@
 
     <a href="#main-content" class="back-to-top" id="backToTop" aria-label="Back to top">↑</a>
 
-    <footer>
+    <footer role="contentinfo">
         <p>© 2025 Panyarat Netrune. All Rights Reserved.</p>
         <p>Built with ❤️ using HTML, CSS, and JavaScript.</p>
-        <p style="margin-top: 1rem; font-size: 0.9rem;">
+        <nav aria-label="Footer navigation" style="margin-top: 1rem; font-size: 0.9rem;">
             <a href="mailto:panyarat.n@ku.th">Contact</a> | 
             <a href="https://www.linkedin.com/in/panyarat-netruen-282760393/" target="_blank" rel="noopener noreferrer">LinkedIn</a>
-        </p>
+        </nav>
     </footer>
 
     <script src="https://cdnjs.cloudflare.com/ajax/libs/particles.js/2.0.0/particles.min.js"></script>
 
     <script>
-        // Cache DOM elements
-        const DOM = {
-            pageLoader: document.getElementById('pageLoader'),
-            progressBar: document.getElementById('progressBar'),
-            backToTop: document.getElementById('backToTop'),
-            menuToggle: document.getElementById('menuToggle'),
-            navMenu: document.getElementById('navMenu'),
-            lightbox: document.getElementById('lightbox'),
-            lightboxImg: document.getElementById('lightbox-img'),
-            closeLightbox: document.querySelector('.close-lightbox'),
-            toast: document.getElementById('toast'),
-            typingText: document.getElementById('typingText'),
-            themeToggle: document.getElementById('themeToggle')
-        };
-
-        // --- 3. Modal Logic (NEW) ---
-        function openModal(modalId) {
-            const modal = document.getElementById(modalId);
-            if (modal) {
-                modal.classList.add('show');
-                document.body.style.overflow = 'hidden'; // Prevent scrolling
-            }
-        }
-
-        function closeModal(modalId) {
-            const modal = document.getElementById(modalId);
-            if (modal) {
-                modal.classList.remove('show');
-                document.body.style.overflow = ''; // Restore scrolling
-            }
-        }
-
-        // Close modal if clicked outside
-        window.onclick = function(event) {
-            if (event.target.classList.contains('modal')) {
-                event.target.classList.remove('show');
-                document.body.style.overflow = '';
-            }
-        }
-
-        // --- DARK MODE LOGIC START ---
+        /**
+         * Portfolio Website - Main JavaScript
+         * Optimized for performance, accessibility, and user experience
+         */
         
-        // 1. Check local storage or system preference on load
-        const currentTheme = localStorage.getItem('theme');
-        const prefersDarkScheme = window.matchMedia("(prefers-color-scheme: dark)");
-
-        if (currentTheme == "dark") {
-            document.documentElement.setAttribute('data-theme', 'dark');
-            DOM.themeToggle.textContent = "☀️"; // Change icon to Sun
-        } else if (currentTheme == "light") {
-            document.documentElement.setAttribute('data-theme', 'light');
-            DOM.themeToggle.textContent = "🌙"; // Change icon to Moon
+        // ============================================
+        // UTILITY FUNCTIONS
+        // ============================================
+        
+        // Debounce function for performance optimization
+        function debounce(func, wait) {
+            let timeout;
+            return function executedFunction(...args) {
+                const later = () => {
+                    clearTimeout(timeout);
+                    func(...args);
+                };
+                clearTimeout(timeout);
+                timeout = setTimeout(later, wait);
+            };
         }
 
-        // 2. Toggle Event Listener
-        DOM.themeToggle.addEventListener('click', function() {
-            let theme = document.documentElement.getAttribute('data-theme');
-            
-            if (theme === 'dark') {
-                document.documentElement.setAttribute('data-theme', 'light');
-                localStorage.setItem('theme', 'light');
-                DOM.themeToggle.textContent = "🌙";
-            } else {
-                document.documentElement.setAttribute('data-theme', 'dark');
-                localStorage.setItem('theme', 'dark');
-                DOM.themeToggle.textContent = "☀️";
-            }
-        });
-        // --- DARK MODE LOGIC END ---
-
-        // Page Loader
-        window.addEventListener('load', () => {
-            setTimeout(() => {
-                DOM.pageLoader.classList.add('hidden');
-            }, 800);
-        });
-
-        // Particles.js Configuration
-        if (typeof particlesJS !== 'undefined') {
-            particlesJS('particles-js', {
-                particles: {
-                    number: { value: 80, density: { enable: true, value_area: 800 } },
-                    color: { value: '#ffffff' },
-                    shape: { type: 'circle' },
-                    opacity: { value: 0.5, random: false },
-                    size: { value: 3, random: true },
-                    line_linked: {
-                        enable: true,
-                        distance: 150,
-                        color: '#ffffff',
-                        opacity: 0.4,
-                        width: 1
-                    },
-                    move: {
-                        enable: true,
-                        speed: 2,
-                        direction: 'none',
-                        random: false,
-                        straight: false,
-                        out_mode: 'out',
-                        bounce: false
-                    }
-                },
-                interactivity: {
-                    detect_on: 'canvas',
-                    events: {
-                        onhover: { enable: true, mode: 'repulse' },
-                        onclick: { enable: true, mode: 'push' },
-                        resize: true
-                    }
-                },
-                retina_detect: true
-            });
-        }
-
-        // Typing Animation
-        const texts = ['Business Analyst', 'System Analyst', 'Software Developer Enthusiast'];
-        let textIndex = 0;
-        let charIndex = 0;
-        let isDeleting = false;
-
-        function typeText() {
-            const currentText = texts[textIndex];
-            
-            if (isDeleting) {
-                DOM.typingText.textContent = currentText.substring(0, charIndex - 1);
-                charIndex--;
-            } else {
-                DOM.typingText.textContent = currentText.substring(0, charIndex + 1);
-                charIndex++;
-            }
-
-            let typeSpeed = isDeleting ? 50 : 100;
-
-            if (!isDeleting && charIndex === currentText.length) {
-                typeSpeed = 2000;
-                isDeleting = true;
-            } else if (isDeleting && charIndex === 0) {
-                isDeleting = false;
-                textIndex = (textIndex + 1) % texts.length;
-                typeSpeed = 500;
-            }
-
-            setTimeout(typeText, typeSpeed);
-        }
-
-        typeText();
-
-        // Toast Notification
-        function showToast(message) {
-            DOM.toast.textContent = message;
-            DOM.toast.classList.add('show');
-            setTimeout(() => {
-                DOM.toast.classList.remove('show');
-            }, 3000);
-        }
-
-        // Hamburger Menu
-        DOM.menuToggle.addEventListener('click', () => {
-            const isOpen = DOM.navMenu.classList.toggle('active');
-            DOM.menuToggle.classList.toggle('active');
-            DOM.menuToggle.setAttribute('aria-expanded', isOpen);
-            document.body.style.overflow = isOpen ? 'hidden' : '';
-        });
-
-        // Close menu when clicking links
-        const navLinks = document.querySelectorAll('nav ul li a');
-        navLinks.forEach(link => {
-            link.addEventListener('click', () => {
-                if (window.innerWidth <= 768) {
-                    DOM.navMenu.classList.remove('active');
-                    DOM.menuToggle.classList.remove('active');
-                    DOM.menuToggle.setAttribute('aria-expanded', 'false');
-                    document.body.style.overflow = '';
-                }
-            });
-        });
-
-        // Throttle function
+        // Throttle function for scroll events
         function throttle(func, wait) {
             let timeout;
             return function executedFunction(...args) {
@@ -2003,21 +2318,385 @@
             };
         }
 
-        // Scroll Handler
-        const handleScroll = throttle(() => {
-            const winScroll = document.body.scrollTop || document.documentElement.scrollTop;
-            const height = document.documentElement.scrollHeight - document.documentElement.clientHeight;
-            const scrolled = (winScroll / height) * 100;
-            DOM.progressBar.style.width = scrolled + "%";
+        // Check if user prefers reduced motion
+        const prefersReducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+
+        // ============================================
+        // DOM ELEMENTS CACHE
+        // ============================================
+        
+        const DOM = {
+            pageLoader: document.getElementById('pageLoader'),
+            progressBar: document.getElementById('progressBar'),
+            loadingOverlay: document.getElementById('loadingOverlay'),
+            backToTop: document.getElementById('backToTop'),
+            menuToggle: document.getElementById('menuToggle'),
+            navMenu: document.getElementById('navMenu'),
+            lightbox: document.getElementById('lightbox'),
+            lightboxImg: document.getElementById('lightbox-img'),
+            closeLightbox: document.querySelector('.close-lightbox'),
+            toast: document.getElementById('toast'),
+            typingText: document.getElementById('typingText'),
+            themeToggle: document.getElementById('themeToggle'),
+            contactForm: document.getElementById('contactForm'),
+            emailInput: document.getElementById('contactEmail'),
+            messageInput: document.getElementById('contactMessage'),
+            emailError: document.getElementById('emailError'),
+            messageError: document.getElementById('messageError'),
+            submitBtn: document.getElementById('submitBtn')
+        };
+
+        // ============================================
+        // MODAL MANAGEMENT
+        // ============================================
+        
+        function openModal(modalId) {
+            const modal = document.getElementById(modalId);
+            if (!modal) return;
             
-            if (winScroll > 300) {
-                DOM.backToTop.classList.add("show");
-            } else {
-                DOM.backToTop.classList.remove("show");
+            modal.classList.add('show');
+            modal.setAttribute('aria-hidden', 'false');
+            document.body.style.overflow = 'hidden';
+            
+            // Focus management
+            const firstFocusable = modal.querySelector('button, [href], input, select, textarea, [tabindex]:not([tabindex="-1"])');
+            if (firstFocusable) {
+                setTimeout(() => firstFocusable.focus(), 100);
+            }
+            
+            // Prevent body scroll on mobile
+            document.body.style.position = 'fixed';
+            document.body.style.width = '100%';
+        }
+
+        function closeModal(modalId) {
+            const modal = document.getElementById(modalId);
+            if (!modal) return;
+            
+            modal.classList.remove('show');
+            modal.setAttribute('aria-hidden', 'true');
+            document.body.style.overflow = '';
+            document.body.style.position = '';
+            document.body.style.width = '';
+            
+            // Return focus to trigger element if available
+            const trigger = document.activeElement;
+            if (trigger && trigger.tagName === 'BUTTON') {
+                trigger.focus();
+            }
+        }
+
+        // Close modal on outside click
+        document.addEventListener('click', function(event) {
+            if (event.target.classList.contains('modal')) {
+                const modalId = event.target.id;
+                closeModal(modalId);
             }
         });
 
-        window.addEventListener('scroll', handleScroll);
+        // Close modal on Escape key
+        document.addEventListener('keydown', function(e) {
+            if (e.key === 'Escape') {
+                const activeModal = document.querySelector('.modal.show');
+                if (activeModal) {
+                    closeModal(activeModal.id);
+                }
+            }
+        });
+
+        // ============================================
+        // THEME MANAGEMENT (Dark/Light Mode)
+        // ============================================
+        
+        function initTheme() {
+            const savedTheme = localStorage.getItem('theme');
+            const prefersDark = window.matchMedia('(prefers-color-scheme: dark)').matches;
+            
+            // Use saved theme, or system preference, or default to light
+            const theme = savedTheme || (prefersDark ? 'dark' : 'light');
+            setTheme(theme);
+        }
+
+        function setTheme(theme) {
+            document.documentElement.setAttribute('data-theme', theme);
+            localStorage.setItem('theme', theme);
+            DOM.themeToggle.textContent = theme === 'dark' ? '☀️' : '🌙';
+            DOM.themeToggle.setAttribute('aria-label', `Switch to ${theme === 'dark' ? 'light' : 'dark'} mode`);
+        }
+
+        function toggleTheme() {
+            const currentTheme = document.documentElement.getAttribute('data-theme');
+            const newTheme = currentTheme === 'dark' ? 'light' : 'dark';
+            setTheme(newTheme);
+        }
+
+        // Initialize theme on load
+        if (DOM.themeToggle) {
+            initTheme();
+            DOM.themeToggle.addEventListener('click', toggleTheme);
+            
+            // Listen for system theme changes
+            window.matchMedia('(prefers-color-scheme: dark)').addEventListener('change', (e) => {
+                if (!localStorage.getItem('theme')) {
+                    setTheme(e.matches ? 'dark' : 'light');
+                }
+            });
+        }
+
+        // ============================================
+        // PAGE LOADER & INITIALIZATION
+        // ============================================
+        
+        function hidePageLoader() {
+            if (DOM.pageLoader) {
+                DOM.pageLoader.classList.add('hidden');
+                // Remove from DOM after animation
+                setTimeout(() => {
+                    if (DOM.pageLoader.parentNode) {
+                        DOM.pageLoader.remove();
+                    }
+                }, 500);
+            }
+        }
+
+        // Hide loader when page is fully loaded
+        if (document.readyState === 'complete') {
+            hidePageLoader();
+        } else {
+            window.addEventListener('load', () => {
+                setTimeout(hidePageLoader, prefersReducedMotion ? 0 : 800);
+            });
+        }
+
+        // Particles.js Configuration with Error Handling
+        function initParticles() {
+            try {
+                if (typeof particlesJS !== 'undefined') {
+                    particlesJS('particles-js', {
+                        particles: {
+                            number: { value: 80, density: { enable: true, value_area: 800 } },
+                            color: { value: '#ffffff' },
+                            shape: { type: 'circle' },
+                            opacity: { value: 0.5, random: false },
+                            size: { value: 3, random: true },
+                            line_linked: {
+                                enable: true,
+                                distance: 150,
+                                color: '#ffffff',
+                                opacity: 0.4,
+                                width: 1
+                            },
+                            move: {
+                                enable: true,
+                                speed: 2,
+                                direction: 'none',
+                                random: false,
+                                straight: false,
+                                out_mode: 'out',
+                                bounce: false
+                            }
+                        },
+                        interactivity: {
+                            detect_on: 'canvas',
+                            events: {
+                                onhover: { enable: true, mode: 'repulse' },
+                                onclick: { enable: true, mode: 'push' },
+                                resize: true
+                            }
+                        },
+                        retina_detect: true
+                    });
+                } else {
+                    // Fallback: Hide particles container if library fails to load
+                    const particlesContainer = document.getElementById('particles-js');
+                    if (particlesContainer) {
+                        particlesContainer.style.display = 'none';
+                    }
+                }
+            } catch (error) {
+                // Only log in development
+                if (window.location.hostname === 'localhost' || window.location.hostname === '127.0.0.1') {
+                    console.warn('Particles.js initialization failed:', error);
+                }
+                const particlesContainer = document.getElementById('particles-js');
+                if (particlesContainer) {
+                    particlesContainer.style.display = 'none';
+                }
+            }
+        }
+
+        // Initialize particles after page load
+        if (document.readyState === 'loading') {
+            document.addEventListener('DOMContentLoaded', initParticles);
+        } else {
+            initParticles();
+        }
+
+        // ============================================
+        // TYPING ANIMATION
+        // ============================================
+        
+        function initTypingAnimation() {
+            if (!DOM.typingText || prefersReducedMotion) {
+                // Show first text immediately if reduced motion
+                if (DOM.typingText) {
+                    DOM.typingText.textContent = 'Business Analyst';
+                }
+                return;
+            }
+            
+            const texts = ['Business Analyst', 'System Analyst', 'Software Developer Enthusiast'];
+            let textIndex = 0;
+            let charIndex = 0;
+            let isDeleting = false;
+
+            function typeText() {
+                const currentText = texts[textIndex];
+                
+                if (isDeleting) {
+                    DOM.typingText.textContent = currentText.substring(0, charIndex - 1);
+                    charIndex--;
+                } else {
+                    DOM.typingText.textContent = currentText.substring(0, charIndex + 1);
+                    charIndex++;
+                }
+
+                let typeSpeed = isDeleting ? 50 : 100;
+
+                if (!isDeleting && charIndex === currentText.length) {
+                    typeSpeed = 2000;
+                    isDeleting = true;
+                } else if (isDeleting && charIndex === 0) {
+                    isDeleting = false;
+                    textIndex = (textIndex + 1) % texts.length;
+                    typeSpeed = 500;
+                }
+
+                setTimeout(typeText, typeSpeed);
+            }
+
+            typeText();
+        }
+        
+        initTypingAnimation();
+
+        // ============================================
+        // TOAST NOTIFICATIONS
+        // ============================================
+        
+        function showToast(message, duration = 3000) {
+            if (!DOM.toast) return;
+            
+            DOM.toast.textContent = message;
+            DOM.toast.classList.add('show');
+            DOM.toast.setAttribute('aria-live', 'assertive');
+            
+            setTimeout(() => {
+                DOM.toast.classList.remove('show');
+                DOM.toast.setAttribute('aria-live', 'polite');
+            }, duration);
+        }
+        
+        // ============================================
+        // LOADING OVERLAY MANAGEMENT
+        // ============================================
+        
+        function showLoading() {
+            if (DOM.loadingOverlay) {
+                DOM.loadingOverlay.classList.add('active');
+                DOM.loadingOverlay.setAttribute('aria-hidden', 'false');
+            }
+        }
+        
+        function hideLoading() {
+            if (DOM.loadingOverlay) {
+                DOM.loadingOverlay.classList.remove('active');
+                DOM.loadingOverlay.setAttribute('aria-hidden', 'true');
+            }
+        }
+
+        // ============================================
+        // NAVIGATION MENU
+        // ============================================
+        
+        function toggleMobileMenu() {
+            if (!DOM.menuToggle || !DOM.navMenu) return;
+            
+            const isOpen = DOM.navMenu.classList.toggle('active');
+            DOM.menuToggle.classList.toggle('active');
+            DOM.menuToggle.setAttribute('aria-expanded', isOpen);
+            document.body.style.overflow = isOpen ? 'hidden' : '';
+        }
+
+        function closeMobileMenu() {
+            if (!DOM.navMenu || !DOM.menuToggle) return;
+            
+            DOM.navMenu.classList.remove('active');
+            DOM.menuToggle.classList.remove('active');
+            DOM.menuToggle.setAttribute('aria-expanded', 'false');
+            document.body.style.overflow = '';
+        }
+
+        if (DOM.menuToggle) {
+            DOM.menuToggle.addEventListener('click', toggleMobileMenu);
+        }
+
+        // Close menu when clicking links
+        const navLinks = document.querySelectorAll('nav ul li a');
+        navLinks.forEach(link => {
+            link.addEventListener('click', () => {
+                if (window.innerWidth <= 768) {
+                    closeMobileMenu();
+                }
+            });
+        });
+
+        // Close menu on Escape key
+        document.addEventListener('keydown', (e) => {
+            if (e.key === 'Escape' && DOM.navMenu && DOM.navMenu.classList.contains('active')) {
+                closeMobileMenu();
+            }
+        });
+
+        // Close menu when clicking outside
+        document.addEventListener('click', (e) => {
+            if (DOM.navMenu && DOM.navMenu.classList.contains('active')) {
+                if (!DOM.navMenu.contains(e.target) && !DOM.menuToggle.contains(e.target)) {
+                    closeMobileMenu();
+                }
+            }
+        });
+
+        // ============================================
+        // SCROLL HANDLING & PROGRESS BAR
+        // ============================================
+        
+        function updateScrollProgress() {
+            const winScroll = document.documentElement.scrollTop || document.body.scrollTop;
+            const height = document.documentElement.scrollHeight - document.documentElement.clientHeight;
+            const scrolled = height > 0 ? (winScroll / height) * 100 : 0;
+            
+            if (DOM.progressBar) {
+                DOM.progressBar.style.width = scrolled + "%";
+                DOM.progressBar.setAttribute('aria-valuenow', Math.round(scrolled));
+            }
+            
+            // Show/hide back to top button
+            if (DOM.backToTop) {
+                if (winScroll > 300) {
+                    DOM.backToTop.classList.add("show");
+                } else {
+                    DOM.backToTop.classList.remove("show");
+                }
+            }
+        }
+
+        // Throttled scroll handler for performance
+        const handleScroll = throttle(updateScrollProgress, 16); // ~60fps
+        window.addEventListener('scroll', handleScroll, { passive: true });
+        
+        // Initial update
+        updateScrollProgress();
 
         // Counter Animation for Stats
         function animateCounter(element) {
@@ -2054,19 +2733,31 @@
             }
         }
 
-        // Intersection Observer for animations
+        // ============================================
+        // INTERSECTION OBSERVER FOR ANIMATIONS
+        // ============================================
+        
+        // Use requestIdleCallback if available for better performance
+        const scheduleObserver = window.requestIdleCallback || ((cb) => setTimeout(cb, 1));
+        
         const observerOptions = {
-            threshold: 0.1,
-            rootMargin: '0px'
+            threshold: prefersReducedMotion ? 0.5 : 0.1,
+            rootMargin: prefersReducedMotion ? '0px' : '50px'
         };
 
         const observer = new IntersectionObserver((entries) => {
             entries.forEach(entry => {
-                if (entry.isIntersecting) {
+                if (entry.isIntersecting && !prefersReducedMotion) {
                     // Animate stats counters
                     if (entry.target.id === 'about') {
                         const statNumbers = entry.target.querySelectorAll('.stat-number');
-                        statNumbers.forEach(animateCounter);
+                        statNumbers.forEach((el, index) => {
+                            // Only animate once
+                            if (!el.dataset.animated) {
+                                el.dataset.animated = 'true';
+                                animateCounter(el);
+                            }
+                        });
                     }
                     
                     // Animate skill bars
@@ -2082,43 +2773,73 @@
             });
         }, observerOptions);
 
-        document.querySelectorAll('section').forEach(section => {
-            observer.observe(section);
+        // Observe all sections (deferred for better initial load)
+        scheduleObserver(() => {
+            document.querySelectorAll('section').forEach(section => {
+                observer.observe(section);
+            });
         });
 
-        // Lightbox
-        const images = document.querySelectorAll('.gallery-item img, .diagram-frame img');
+        // ============================================
+        // LIGHTBOX FUNCTIONALITY
+        // ============================================
+        
+        function initLightbox() {
+            if (!DOM.lightbox || !DOM.lightboxImg) return;
+            
+            const images = document.querySelectorAll('.gallery-item img, .diagram-frame img');
 
-        images.forEach(img => {
-            const openLightbox = () => {
-                DOM.lightbox.classList.add('active');
-                DOM.lightboxImg.src = img.src;
-                DOM.lightboxImg.alt = img.alt;
-                document.body.style.overflow = 'hidden';
-            };
+            images.forEach(img => {
+                const openLightbox = (e) => {
+                    e.preventDefault();
+                    DOM.lightbox.classList.add('active');
+                    DOM.lightbox.setAttribute('aria-hidden', 'false');
+                    DOM.lightboxImg.src = img.src;
+                    DOM.lightboxImg.alt = img.alt || 'Image';
+                    document.body.style.overflow = 'hidden';
+                    
+                    // Focus management
+                    if (DOM.closeLightbox) {
+                        setTimeout(() => DOM.closeLightbox.focus(), 100);
+                    }
+                };
 
-            img.parentElement.addEventListener('click', openLightbox);
-        });
+                // Support both click and keyboard
+                const container = img.parentElement;
+                container.addEventListener('click', openLightbox);
+                container.addEventListener('keydown', (e) => {
+                    if (e.key === 'Enter' || e.key === ' ') {
+                        openLightbox(e);
+                    }
+                });
+            });
 
-        function closeLightboxFunc() {
-            DOM.lightbox.classList.remove('active');
-            document.body.style.overflow = '';
+            function closeLightbox() {
+                DOM.lightbox.classList.remove('active');
+                DOM.lightbox.setAttribute('aria-hidden', 'true');
+                document.body.style.overflow = '';
+            }
+
+            if (DOM.closeLightbox) {
+                DOM.closeLightbox.addEventListener('click', closeLightbox);
+            }
+
+            DOM.lightbox.addEventListener('click', (e) => {
+                if (e.target === DOM.lightbox) {
+                    closeLightbox();
+                }
+            });
+
+            // Keyboard navigation
+            document.addEventListener('keydown', (e) => {
+                if (e.key === 'Escape' && DOM.lightbox.classList.contains('active')) {
+                    e.preventDefault();
+                    closeLightbox();
+                }
+            });
         }
-
-        DOM.closeLightbox.addEventListener('click', closeLightboxFunc);
-
-        DOM.lightbox.addEventListener('click', (e) => {
-            if (e.target === DOM.lightbox) {
-                closeLightboxFunc();
-            }
-        });
-
-        document.addEventListener('keydown', (e) => {
-            if (e.key === 'Escape' && DOM.lightbox.classList.contains('active')) {
-                e.preventDefault();
-                closeLightboxFunc();
-            }
-        });
+        
+        initLightbox();
 
         // Lazy loading fallback
         if (!('loading' in HTMLImageElement.prototype)) {
@@ -2128,9 +2849,235 @@
             });
         }
 
-        // Preload critical images
-        const criticalImage = new Image();
-        criticalImage.src = 'Me3.jpg';
+        // Preload critical images with error handling
+        function preloadImage(src) {
+            return new Promise((resolve, reject) => {
+                const img = new Image();
+                img.onload = () => resolve(img);
+                img.onerror = () => reject(new Error(`Failed to load image: ${src}`));
+                img.src = src;
+            });
+        }
+
+        try {
+            preloadImage('Me3.jpg').catch(err => {
+                // Only log in development
+                if (window.location.hostname === 'localhost' || window.location.hostname === '127.0.0.1') {
+                    console.warn('Image preload failed:', err);
+                }
+            });
+        } catch (error) {
+            if (window.location.hostname === 'localhost' || window.location.hostname === '127.0.0.1') {
+                console.warn('Image preload error:', error);
+            }
+        }
+
+        // ============================================
+        // FORM VALIDATION & SUBMISSION
+        // ============================================
+
+        function validateEmail(email) {
+            const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+            return emailRegex.test(email);
+        }
+
+        function validateMessage(message) {
+            return message.trim().length >= 10;
+        }
+
+        function showError(element, errorElement, message) {
+            element.setAttribute('aria-invalid', 'true');
+            errorElement.textContent = message;
+            errorElement.style.display = 'block';
+        }
+
+        function clearError(element, errorElement) {
+            element.setAttribute('aria-invalid', 'false');
+            errorElement.textContent = '';
+            errorElement.style.display = 'none';
+        }
+
+        if (DOM.emailInput && DOM.emailError) {
+            DOM.emailInput.addEventListener('blur', function() {
+                if (!this.value) {
+                    showError(this, DOM.emailError, 'Email is required');
+                } else if (!validateEmail(this.value)) {
+                    showError(this, DOM.emailError, 'Please enter a valid email address');
+                } else {
+                    clearError(this, DOM.emailError);
+                }
+            });
+
+            DOM.emailInput.addEventListener('input', function() {
+                if (this.value && validateEmail(this.value)) {
+                    clearError(this, DOM.emailError);
+                }
+            });
+        }
+
+        if (DOM.messageInput && DOM.messageError) {
+            DOM.messageInput.addEventListener('blur', function() {
+                if (!this.value) {
+                    showError(this, DOM.messageError, 'Message is required');
+                } else if (!validateMessage(this.value)) {
+                    showError(this, DOM.messageError, 'Message must be at least 10 characters long');
+                } else {
+                    clearError(this, DOM.messageError);
+                }
+            });
+
+            DOM.messageInput.addEventListener('input', function() {
+                if (this.value && validateMessage(this.value)) {
+                    clearError(this, DOM.messageError);
+                }
+            });
+        }
+
+        if (DOM.contactForm) {
+            DOM.contactForm.addEventListener('submit', function(e) {
+                let isValid = true;
+
+                // Validate email
+                if (!DOM.emailInput.value || !validateEmail(DOM.emailInput.value)) {
+                    showError(DOM.emailInput, DOM.emailError, DOM.emailInput.value ? 'Please enter a valid email address' : 'Email is required');
+                    isValid = false;
+                }
+
+                // Validate message
+                if (!DOM.messageInput.value || !validateMessage(DOM.messageInput.value)) {
+                    showError(DOM.messageInput, DOM.messageError, DOM.messageInput.value ? 'Message must be at least 10 characters long' : 'Message is required');
+                    isValid = false;
+                }
+
+                if (!isValid) {
+                    e.preventDefault();
+                    showToast('Please fix the errors before submitting');
+                    DOM.emailInput.focus();
+                    return false;
+                }
+
+                // Show loading state
+                showLoading();
+                DOM.submitBtn.disabled = true;
+                DOM.submitBtn.textContent = '⏳ Sending...';
+
+                // Form will submit normally to Formspree
+                // Hide loading after a delay (Formspree handles redirect)
+                setTimeout(() => {
+                    hideLoading();
+                    showToast('Message sent successfully!', 5000);
+                    DOM.contactForm.reset();
+                    DOM.submitBtn.disabled = false;
+                    DOM.submitBtn.textContent = '🚀 Send Message';
+                }, 2000);
+            });
+        }
+
+        // ============================================
+        // ACCESSIBILITY: FOCUS TRAP FOR MODALS
+        // ============================================
+        
+        function trapFocus(modal) {
+            const focusableElements = modal.querySelectorAll(
+                'a[href], button:not([disabled]), textarea:not([disabled]), input:not([disabled]), select:not([disabled]), [tabindex]:not([tabindex="-1"])'
+            );
+            if (focusableElements.length === 0) return;
+            
+            const firstElement = focusableElements[0];
+            const lastElement = focusableElements[focusableElements.length - 1];
+
+            function handleTabKey(e) {
+                if (e.key !== 'Tab') return;
+
+                if (e.shiftKey) {
+                    if (document.activeElement === firstElement) {
+                        lastElement.focus();
+                        e.preventDefault();
+                    }
+                } else {
+                    if (document.activeElement === lastElement) {
+                        firstElement.focus();
+                        e.preventDefault();
+                    }
+                }
+            }
+
+            modal.addEventListener('keydown', handleTabKey);
+        }
+
+        // Apply focus trap to all modals
+        document.querySelectorAll('.modal').forEach(modal => {
+            trapFocus(modal);
+        });
+
+        // ============================================
+        // WEB VITALS & PERFORMANCE MONITORING
+        // ============================================
+        
+        // Log performance metrics (can be sent to analytics)
+        if ('performance' in window) {
+            window.addEventListener('load', () => {
+                setTimeout(() => {
+                    const perfData = performance.getEntriesByType('navigation')[0];
+                    if (perfData) {
+                        const loadTime = perfData.loadEventEnd - perfData.fetchStart;
+                        const domContentLoaded = perfData.domContentLoadedEventEnd - perfData.fetchStart;
+                        
+                        // Log to console (can be sent to analytics)
+                        // Performance metrics (only log in development)
+                        if (window.location.hostname === 'localhost' || window.location.hostname === '127.0.0.1') {
+                            console.log('Performance Metrics:', {
+                                'Page Load Time': `${Math.round(loadTime)}ms`,
+                                'DOM Content Loaded': `${Math.round(domContentLoaded)}ms`
+                            });
+                        }
+                    }
+                }, 0);
+            });
+        }
+
+        // ============================================
+        // ERROR HANDLING & FALLBACKS
+        // ============================================
+        
+        // Global error handler (production-ready)
+        window.addEventListener('error', (e) => {
+            // Only log in development, send to analytics in production
+            if (window.location.hostname === 'localhost' || window.location.hostname === '127.0.0.1') {
+                console.error('Global error:', e.error);
+            }
+            // In production, could send to error tracking service like Sentry
+            // Example: if (typeof gtag !== 'undefined') gtag('event', 'exception', {...});
+        });
+
+        // Unhandled promise rejection handler
+        window.addEventListener('unhandledrejection', (e) => {
+            if (window.location.hostname === 'localhost' || window.location.hostname === '127.0.0.1') {
+                console.error('Unhandled promise rejection:', e.reason);
+            }
+            // In production, could send to error tracking service
+        });
+
+        // ============================================
+        // SMOOTH SCROLL POLYFILL (for older browsers)
+        // ============================================
+        
+        if (!('scrollBehavior' in document.documentElement.style)) {
+            // Polyfill for smooth scroll (if needed)
+            const script = document.createElement('script');
+            script.src = 'https://cdn.jsdelivr.net/gh/cferdinandi/smooth-scroll@15/dist/smooth-scroll.polyfills.min.js';
+            script.async = true;
+            document.head.appendChild(script);
+        }
+
+        // ============================================
+        // INITIALIZATION COMPLETE
+        // ============================================
+        
+        // Only log in development
+        if (window.location.hostname === 'localhost' || window.location.hostname === '127.0.0.1') {
+            console.log('Portfolio website initialized successfully');
+        }
     </script>
 </body>
 </html>
