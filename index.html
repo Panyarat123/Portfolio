@@ -2444,14 +2444,16 @@
             }
         }
 
-        // Hide loader when page is fully loaded
         if (document.readyState === 'complete') {
-            hidePageLoader();
-        } else {
-            window.addEventListener('load', () => {
-                setTimeout(hidePageLoader, prefersReducedMotion ? 0 : 800);
-            });
-        }
+    hidePageLoader();
+} else {
+    window.addEventListener('load', () => {
+        setTimeout(hidePageLoader, prefersReducedMotion ? 0 : 800);
+    });
+}
+
+// ✅ Fallback: ถ้าโหลดนานเกิน 3 วินาที ให้ปิด loader อัตโนมัติ
+setTimeout(hidePageLoader, 3000);
 
         // Particles.js Configuration with Error Handling
         function initParticles() {
@@ -3066,6 +3068,7 @@
     </script>
 </body>
 </html>
+
 
 
 
