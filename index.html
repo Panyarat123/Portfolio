@@ -1745,7 +1745,6 @@
             <div class="project-links">
                 <button onclick="openModal('modal-thaink')" class="project-link btn-primary-inline">🔍 View Details / ดูรายละเอียด</button>
                 <a href="..." target="_blank" rel="noopener noreferrer" class="project-link btn-success">📊 View Live Dashboard →</a>
-                <a href="https://github.com/Panyarat123/Superstore-Sales-Analysis" target="_blank" class="project-link btn-dark">💻 GitHub</a>
             </div>
         </div>
 
@@ -2349,40 +2348,28 @@
         // ============================================
         
         function openModal(modalId) {
-            const modal = document.getElementById(modalId);
-            if (!modal) return;
-            
-            modal.classList.add('show');
-            modal.setAttribute('aria-hidden', 'false');
-            document.body.style.overflow = 'hidden';
-            
-            // Focus management
-            const firstFocusable = modal.querySelector('button, [href], input, select, textarea, [tabindex]:not([tabindex="-1"])');
-            if (firstFocusable) {
-                setTimeout(() => firstFocusable.focus(), 100);
-            }
-            
-            // Prevent body scroll on mobile
-            document.body.style.position = 'fixed';
-            document.body.style.width = '100%';
-        }
+    const modal = document.getElementById(modalId);
+    if (!modal) return;
+    
+    modal.style.display = 'block'; // ✅ เพิ่มบรรทัดนี้
+    modal.classList.add('show');
+    modal.setAttribute('aria-hidden', 'false');
+    document.body.style.overflow = 'hidden';
+    
+    const firstFocusable = modal.querySelector('button, [href], input, select, textarea, [tabindex]:not([tabindex="-1"])');
+    if (firstFocusable) {
+        setTimeout(() => firstFocusable.focus(), 100);
+    }
 
         function closeModal(modalId) {
-            const modal = document.getElementById(modalId);
-            if (!modal) return;
-            
-            modal.classList.remove('show');
-            modal.setAttribute('aria-hidden', 'true');
-            document.body.style.overflow = '';
-            document.body.style.position = '';
-            document.body.style.width = '';
-            
-            // Return focus to trigger element if available
-            const trigger = document.activeElement;
-            if (trigger && trigger.tagName === 'BUTTON') {
-                trigger.focus();
-            }
-        }
+    const modal = document.getElementById(modalId);
+    if (!modal) return;
+    
+    modal.classList.remove('show');
+    modal.setAttribute('aria-hidden', 'true');
+    document.body.style.overflow = '';
+    setTimeout(() => { modal.style.display = 'none'; }, 300); // ✅ เพิ่มบรรทัดนี้
+}
 
         // Close modal on outside click
         document.addEventListener('click', function(event) {
@@ -3079,6 +3066,7 @@
     </script>
 </body>
 </html>
+
 
 
 
