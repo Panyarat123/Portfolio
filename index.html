@@ -700,6 +700,104 @@
         </div>
         <!-- END Thai NOK card -->
 
+        <!-- ============================================================
+     วางโค้ดส่วน PROJECT CARD ต่อจาก Thai NOK card เดิม
+     (อยู่ใน section#projects)
+============================================================ -->
+
+<!-- PROJECT CARD: Thai NOK Phase 2 -->
+<div class="project-card">
+    <div class="project-header">
+        <div>
+            <h3 class="project-title">Thai NOK — COPQ & OEE Dashboard (Phase 2)</h3>
+            <p class="project-meta">📊 Business Intelligence & Power BI | 📅 Mar 2026</p>
+        </div>
+        <div class="project-tags">
+            <span class="tag">Power BI</span>
+            <span class="tag">OEE</span>
+            <span class="tag">COPQ</span>
+            <span class="tag">Manufacturing</span>
+            <span class="tag">Quality Analysis</span>
+        </div>
+    </div>
+    <p class="project-description">
+        ต่อยอดจาก Defect Tracking Dashboard (Phase 1) โดยเพิ่มการวิเคราะห์เชิงธุรกิจในมุม <strong>ต้นทุนของเสีย (COPQ)</strong> 
+        และ <strong>ประสิทธิภาพเครื่องจักร (OEE/Quality Rate)</strong> รวม 3 หน้า Dashboard แบบ Interactive 
+        ช่วยให้ผู้จัดการโรงงานเห็นว่าเครื่องจักรไหนสร้างต้นทุนสูงสุด และ Quality Rate อยู่ในเกณฑ์ที่ยอมรับได้หรือไม่
+    </p>
+    <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(140px, 1fr)); gap: 1rem; margin: 1.5rem 0; padding: 1.2rem; background: var(--bg-body); border-radius: 10px; border: 1px solid var(--border-color);">
+        <div style="text-align: center;"><div style="font-size: 1.8rem; font-weight: bold; color: #2563eb;">3,865</div><div style="font-size: 0.8rem; color: var(--text-muted);">Total Defects</div></div>
+        <div style="text-align: center;"><div style="font-size: 1.8rem; font-weight: bold; color: #dc2626;">121K</div><div style="font-size: 0.8rem; color: var(--text-muted);">Total COPQ (฿)</div></div>
+        <div style="text-align: center;"><div style="font-size: 1.8rem; font-weight: bold; color: #f59e0b;">5.31%</div><div style="font-size: 0.8rem; color: var(--text-muted);">Defect Rate %</div></div>
+        <div style="text-align: center;"><div style="font-size: 1.8rem; font-weight: bold; color: #10b981;">0.95</div><div style="font-size: 0.8rem; color: var(--text-muted);">Quality Rate (OEE)</div></div>
+    </div>
+    <div class="project-links">
+        <button onclick="openModal('modal-thaink2')" class="project-link btn-primary-inline">🔍 View Details / ดูรายละเอียด</button>
+    </div>
+</div>
+<!-- END Thai NOK Phase 2 card -->
+
+
+<!-- ============================================================
+     วางโค้ดส่วน MODAL ต่อจาก modal-thaink เดิม
+     (อยู่นอก section ใดๆ ใกล้ๆ กับ modal-thaink)
+============================================================ -->
+
+<!-- Modal: Thai NOK Phase 2 -->
+<div id="modal-thaink2" class="modal" aria-modal="true" role="dialog" aria-labelledby="modal-thaink2-title">
+    <div class="modal-content">
+        <span class="close-modal" onclick="closeModal('modal-thaink2')" aria-label="Close">&times;</span>
+        <h2 class="modal-title" id="modal-thaink2-title">Thai NOK — COPQ & OEE Dashboard (Phase 2)</h2>
+        <p class="modal-role"><strong>Role:</strong> BI Developer & Data Analyst</p>
+        <p class="modal-text">
+            ต่อยอด Phase 1 (Defect Tracking) โดยเพิ่ม 2 หน้า Dashboard ใหม่ คือ <strong>COPQ</strong> (Cost of Poor Quality) 
+            และ <strong>OEE</strong> (Overall Equipment Effectiveness) เพื่อให้ผู้บริหารเห็นภาพครบทั้งในมุม <em>ปริมาณของเสีย</em>, 
+            <em>ต้นทุนที่สูญเสีย</em> และ <em>คุณภาพการผลิตจริงเทียบกับ Target</em>
+        </p>
+
+        <h4 class="modal-title" style="margin-top:1.5rem;">📋 Dashboard Pages (3 หน้า):</h4>
+        <ul class="modal-list">
+            <li>
+                <strong>Page 1 — Defect Log:</strong> ภาพรวม Total Defects (3,865), Defect Rate (5.31%), 
+                แยกตามเครื่องจักร (Molding-01/02/03) และประเภทของเสีย พร้อม Trend by Day
+            </li>
+            <li>
+                <strong>Page 2 — COPQ Analysis:</strong> Total COPQ = 121K บาท, เปรียบเทียบต้นทุนของเสียแต่ละเครื่องจักร 
+                และแยกตามประเภท (Dimension Error สูงสุด)
+            </li>
+            <li>
+                <strong>Page 3 — OEE / Quality Rate:</strong> Quality Rate เฉลี่ย 0.95 vs OEE Target, 
+                เปรียบเทียบ Quality Rate by Machine และ Day vs Night Shift
+            </li>
+        </ul>
+
+        <h4 class="modal-title" style="margin-top:1rem;">💡 Key Insights:</h4>
+        <ul class="modal-list">
+            <li><strong>Molding-01</strong> มีทั้งของเสียและ COPQ สูงสุด → ควรเป็น Priority #1 ในการแก้ไข</li>
+            <li><strong>Dimension Error</strong> คือประเภทของเสียที่มี COPQ สูงสุด → อาจต้อง Calibrate แม่พิมพ์</li>
+            <li><strong>Quality Rate 0.95</strong> อยู่ในเกณฑ์ดี แต่ Molding-01 กะดึกมีแนวโน้มต่ำกว่า → ควรติดตาม</li>
+            <li>การมี COPQ Dashboard ช่วยแปลง "จำนวนของเสีย" ให้เป็น "ตัวเลขการเงิน" ที่ผู้บริหารเข้าใจได้ทันที</li>
+        </ul>
+
+        <h4 class="modal-title" style="margin-top:1rem;">🛠️ Tools Used:</h4>
+        <ul class="modal-list">
+            <li>Power BI Desktop — Data Modeling, DAX Measures, Multi-page Dashboard</li>
+            <li>DAX — COPQ calculation, Defect Rate %, Quality Rate vs Target</li>
+            <li>Interactive Slicer — กรองตามเครื่องจักรได้ทุกหน้า</li>
+        </ul>
+
+        <div class="modal-center">
+            <a href="https://app.powerbi.com/groups/me/reports/fa484df5-6a31-43a5-a62b-3f86c7fdc840/79c3893e55c0786029bc?experience=power-bi"
+               target="_blank" rel="noopener noreferrer"
+               class="btn"
+               style="background: linear-gradient(135deg, #1e3a5f 0%, #2563eb 100%); color: white; border-color: transparent;">
+               📊 Open Live Dashboard in Power BI →
+            </a>
+        </div>
+    </div>
+</div>
+<!-- END Modal: Thai NOK Phase 2 -->
+
         <div class="project-card">
             <div class="project-header">
                 <div>
@@ -1442,3 +1540,4 @@
     </script>
 </body>
 </html>
+
